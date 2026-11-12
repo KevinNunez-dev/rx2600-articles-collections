@@ -28,6 +28,7 @@ faq:
   - question: "When should back pain be evaluated urgently?"
     answer: "Seek emergency care for new bladder or bowel control changes, saddle numbness, or severe or worsening weakness or numbness in both legs."
 related: [sciatica-treatment-with-the-rx2600-therapeutic-robot, carpal-tunnel-treatment-with-rx2600]
+anatomyModel: lumbar-spine
 seo:
   title: "Back Pain Treatment with the RX2600 Therapeutic Robot"
   description: "Learn about back pain care and questions to ask about RX2600 clinician-guided muscular therapy."

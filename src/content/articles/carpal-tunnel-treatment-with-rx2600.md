@@ -28,6 +28,7 @@ faq:
   - question: "When should I get symptoms checked?"
     answer: "Arrange an assessment for persistent symptoms, weakness, or difficulty using the hand. Seek prompt advice if weakness or loss of sensation is worsening."
 related: [sciatica-treatment-with-the-rx2600-therapeutic-robot, back-pain-treatment-with-the-rx2600-therapeutic-robot]
+anatomyModel: carpal-tunnel
 seo:
   title: "Carpal Tunnel Treatment with RX2600"
   description: "Understand carpal tunnel symptoms, care options, and questions about clinician-guided therapy with the RX2600."

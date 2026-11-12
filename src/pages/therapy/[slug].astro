@@ -108,7 +108,7 @@ const articleSchema = {
         <div class="prose article-prose">
         <Content />
         </div>
-        {article.data.anatomyModel === 'pelvic-sacral-plexus' && <AnatomyViewer />}
+        {article.data.anatomyModel && <AnatomyViewer model={article.data.anatomyModel} />}
         {article.data.faq.length > 0 && (
           <section class="article-faq" id="article-faq">
             <p class="marketing-kicker">GOOD TO KNOW</p>
