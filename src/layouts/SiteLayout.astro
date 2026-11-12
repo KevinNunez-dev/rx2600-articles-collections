@@ -47,10 +47,31 @@ const websiteSchema = {
         <img src="/therapy/media/rx2600-logo-white.png" alt="" width="1024" height="401" />
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/therapy/">Explore</a>
-        <a href="/therapy/#approach">Our approach</a>
-        <a class="nav-cta" href="/therapy/#library">Read the library <span aria-hidden="true">↗</span></a>
+        <a href="/therapy/#why-rx2600">Why RX2600</a>
+        <a href="/therapy/#who-its-for">Who it's for</a>
+        <a href="/therapy/#partnership">For business</a>
+        <a href="/therapy/articles/">Insights</a>
+        <form class="header-search" action="/therapy/articles/" method="get" role="search">
+          <label class="sr-only" for="header-query">Search articles</label>
+          <input id="header-query" name="q" type="search" placeholder="Search articles" />
+          <button type="submit" aria-label="Search articles">↗</button>
+        </form>
+        <a class="nav-cta" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
       </nav>
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <a href="/therapy/#why-rx2600">Why RX2600</a>
+          <a href="/therapy/#who-its-for">Who it's for</a>
+          <a href="/therapy/#partnership">For business</a>
+          <a href="/therapy/articles/">Insights</a>
+          <a href="https://rx2600.com/#contact">Talk to our team ↗</a>
+          <form class="mobile-search" action="/therapy/articles/" method="get" role="search">
+            <label for="mobile-query">Search articles</label>
+            <div><input id="mobile-query" name="q" type="search" placeholder="Search articles" /><button type="submit">Search</button></div>
+          </form>
+        </nav>
+      </details>
     </header>
     <main>
       <slot />
@@ -59,8 +80,18 @@ const websiteSchema = {
       <a class="wordmark footer-wordmark" href="/therapy/">
         <img src="/therapy/media/rx2600-logo-white.png" alt="RX2600 Therapy home" width="1024" height="401" />
       </a>
-      <p>Thoughtful perspectives on movement, recovery, and robotic therapy.</p>
-      <span class="footer-note">Education, not a substitute for professional advice.</span>
+      <p>Robotic therapy. Human expertise. New possibilities.</p>
+      <a class="footer-note" href="https://rx2600.com/#contact">Connect with the RX2600 team ↗</a>
     </footer>
   </body>
 </html>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.mobile-menu').forEach((menu) => {
+    menu.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('a')) {
+        menu.open = false;
+      }
+    });
+  });
+</script>

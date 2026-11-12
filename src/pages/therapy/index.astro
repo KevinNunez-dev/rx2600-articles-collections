@@ -1,101 +1,171 @@
 ---
 import { getCollection } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import ArticleList from '../../components/ArticleList.astro';
 
 const articles = (await getCollection('articles'))
   .filter(({ data }) => !data.draft && !data.seo.noindex)
   .sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf());
+const inquiryUrl = 'https://rx2600.com/#contact';
+const audiences = [
+  {
+    name: 'Physical therapy',
+    description: 'Explore a robotic tool that can complement clinician-led physical therapy and soft tissue care.',
+    href: 'https://rx2600.com/pt/',
+    image: '/therapy/media/rx2600-clinicians.jpg',
+  },
+  {
+    name: 'Chiropractic',
+    description: 'Consider how targeted muscular therapy could fit alongside your existing approach to care.',
+    href: 'https://rx2600.com/chiro/',
+    image: '/therapy/media/rpt-treatment.jpg',
+  },
+  {
+    name: 'Sports performance',
+    description: 'Bring a technology-forward muscular therapy option to the active communities you serve.',
+    href: 'https://rx2600.com/sports/',
+    image: '/therapy/media/rx2600-showcase.jpg',
+  },
+  {
+    name: 'Wellness spaces',
+    description: 'Explore whether the RX2600 is a fit for your team, your services, and your clients.',
+    href: inquiryUrl,
+    image: '/therapy/media/rx2600-robot.png',
+  },
+];
 ---
 
 <SiteLayout
-  title="RX2600 | A new perspective on robotic therapy"
-  description="Explore thoughtful perspectives on movement, recovery, and the evolving role of robotics in therapy."
-  image="/therapy/media/rx2600-showcase.jpg"
-  imageAlt="A clinician using the RX2600 Therapeutic Robot"
+  title="RX2600 for Practices | Robotic Therapy and Practice Growth"
+  description="Explore the RX2600 Therapeutic Robot for physical therapy, chiropractic, sports performance, and wellness practices."
+  image="/therapy/media/rx2600-clinicians.jpg"
+  imageAlt="Clinicians working with the RX2600 Therapeutic Robot"
 >
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-line"></span> A different kind of precision</p>
-      <h1>Move toward<br /><span>what matters.</span></h1>
-      <p class="hero-intro">
-        Explore how clinician-guided robotic therapy fits into a thoughtful approach to movement and muscular care.
-      </p>
-      <a class="text-link" href="#library">Explore the library <span aria-hidden="true">↓</span></a>
+  <section class="marketing-hero" aria-labelledby="hero-heading">
+    <img class="hero-photo" src="/therapy/media/rx2600-clinicians.jpg" width="1024" height="683" alt="" fetchpriority="high" />
+    <div class="hero-shade"></div>
+    <div class="marketing-hero-content">
+      <p class="marketing-kicker">THE RX2600 THERAPEUTIC ROBOT</p>
+      <h1 id="hero-heading">A smarter way to<br />grow your practice.</h1>
+      <p>Bring clinician-guided robotic therapy to your practice—and explore a new opportunity to expand your services and revenue.</p>
+      <div class="button-group">
+        <a class="button button-accent" href={inquiryUrl}>Talk to our team <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="#why-rx2600">Explore the RX2600 <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
-    <div class="hero-art">
-      <img src="/therapy/media/rx2600-robot.png" width="1080" height="1080" alt="Close-up of the RX2600 Therapeutic Robot treatment head" />
-      <span class="art-caption">THE RX2600 THERAPEUTIC ROBOT</span>
+    <span class="hero-photo-caption">ROBOTS + CLINICIANS. BUILT AROUND YOUR PRACTICE.</span>
+  </section>
+
+  <section class="business-strip">
+    <div><span>THE GROWTH PARTNER PROGRAM</span><p>A new service. A new possibility for your business.</p></div>
+    <a class="button button-dark" href="#partnership">Explore the program <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="benefits-section" id="why-rx2600">
+    <div class="marketing-section-heading">
+      <p class="marketing-kicker">WHY RX2600</p>
+      <h2>Built for better possibilities.</h2>
+      <p>Bring together clinical expertise and robotic technology to create a distinctive experience for the people you serve.</p>
+    </div>
+    <div class="benefits-grid">
+      <article class="benefit-card">
+        <div class="benefit-image"><img src="/therapy/media/rpt-treatment.jpg" alt="A clinician positions the RX2600 treatment head" loading="lazy" /></div>
+        <span class="card-number">01 / CLINICAL CARE</span>
+        <h3>Support your approach</h3>
+        <p>Use the RX2600 as a clinician-guided tool for targeted muscular therapy and soft tissue care.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-image"><img src="/therapy/media/rx2600-clinicians.jpg" alt="Clinicians working with RX2600 systems" loading="lazy" /></div>
+        <span class="card-number">02 / PRACTICE CAPACITY</span>
+        <h3>Explore more capacity</h3>
+        <p>Consider how robotic therapy can fit your team's workflow and support the way you deliver care.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-image image-product"><img src="/therapy/media/rx2600-robot.png" alt="Close-up of the RX2600 treatment head" loading="lazy" /></div>
+        <span class="card-number">03 / A DISTINCTIVE OFFERING</span>
+        <h3>Stand apart</h3>
+        <p>Introduce a technology-forward service that adds a new dimension to your practice.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-image"><img src="/therapy/media/rx2600-showcase.jpg" alt="A clinician using the RX2600 with a patient" loading="lazy" /></div>
+        <span class="card-number">04 / BUSINESS GROWTH</span>
+        <h3>Open a new revenue path</h3>
+        <p>Explore a potential cash-pay service and a business model designed for practice growth.</p>
+      </article>
     </div>
   </section>
 
-  <section class="intro-section" id="approach">
-    <div class="section-kicker"><span>01</span><span>THE APPROACH</span></div>
-    <div class="intro-copy">
-      <h2>Technology, with a more <em>human</em> point of view.</h2>
-      <p>
-        The RX2600 Therapeutic Robot is a tool clinicians use in muscular therapy. Here, we explore movement, soft tissue care, and the questions people have about robotic therapy.
-      </p>
+  <section class="technology-section" id="approach">
+    <div class="technology-image">
+      <img src="/therapy/media/rpt-treatment.jpg" alt="A clinician using the RX2600 Therapeutic Robot" loading="lazy" />
     </div>
-    <div class="intro-note">
-      <span class="note-mark" aria-hidden="true">↗</span>
-      <p>Clear information.<br />Thoughtful exploration.</p>
+    <div class="technology-copy">
+      <p class="marketing-kicker">PRECISION MEETS PRACTICE</p>
+      <h2>Technology that works alongside your expertise.</h2>
+      <p>The RX2600 Therapeutic Robot is a tool used by clinicians to assist with muscular therapy and soft tissue mobilization. Your clinical judgment remains at the center of care.</p>
+      <a class="button button-dark" href="https://rx2600.com/">Meet the RX2600 <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
-  <section class="product-section" aria-labelledby="product-heading">
-    <img src="/therapy/media/rx2600-showcase.jpg" width="2560" height="1359" loading="lazy" alt="A clinician using the RX2600 Therapeutic Robot with a patient" />
-    <div class="product-copy">
-      <p class="eyebrow"><span class="eyebrow-line"></span> TECHNOLOGY &amp; CARE</p>
-      <h2 id="product-heading">Precision has a<br /><em>human side.</em></h2>
-      <p>Designed for use in clinical settings, the RX2600 supports practitioners as they work with the people in their care.</p>
-      <a class="text-link" href="https://rx2600.com/">Meet the RX2600 <span aria-hidden="true">↗</span></a>
+  <section class="audience-section" id="who-its-for">
+    <div class="marketing-section-heading">
+      <p class="marketing-kicker">DESIGNED FOR YOUR SPACE</p>
+      <h2>Different practices. Shared ambition.</h2>
+      <p>Wherever you work, find out how robotic therapy could fit your vision.</p>
     </div>
+    <div class="audience-grid">
+      {audiences.map((audience) => (
+        <a class="audience-card" href={audience.href}>
+          <div class="audience-image"><img src={audience.image} alt="" loading="lazy" /></div>
+          <div class="audience-card-copy">
+            <h3>{audience.name}</h3>
+            <p>{audience.description}</p>
+            <span>Explore <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="partnership-section" id="partnership">
+    <div class="partnership-intro">
+      <p class="marketing-kicker">THE GROWTH PARTNER PROGRAM</p>
+      <h2>A partnership built around growth.</h2>
+      <p>Our current program is designed to help practices add RX2600 therapy without purchasing the robot. Talk with our team about eligibility, operational fees, and the details for your practice.</p>
+      <a class="button button-accent" href={inquiryUrl}>Discuss your practice <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="partnership-steps">
+      <div><span>01</span><div><h3>Tell us about your practice</h3><p>Share your goals, services, and what you are looking to add.</p></div></div>
+      <div><span>02</span><div><h3>Explore the fit</h3><p>Discuss the system, your setting, and the current program terms with our team.</p></div></div>
+      <div><span>03</span><div><h3>Plan the next step</h3><p>Learn about training and implementation if your practice moves forward.</p></div></div>
+    </div>
+    <p class="program-note">Program availability, eligibility, and terms may vary. A flat-rate operational fee applies. Revenue and results are not guaranteed.</p>
   </section>
 
   <section class="library-section" id="library">
     <div class="section-heading">
       <div>
-        <p class="eyebrow"><span class="eyebrow-line"></span> THE RX2600 JOURNAL</p>
-        <h2>Ideas in <em>motion.</em></h2>
+        <p class="marketing-kicker">THE RX2600 JOURNAL</p>
+        <h2>Ideas for your next chapter.</h2>
+        <a class="archive-link" href="/therapy/articles/">Browse all articles <span aria-hidden="true">↗</span></a>
       </div>
       <p class="library-count">{articles.length.toString().padStart(2, '0')} ARTICLES</p>
     </div>
     {articles.length > 0 ? (
-      <div class="article-grid">
-        {articles.map((article, index) => (
-          <a class="article-card" href={`/therapy/${article.id}/`}>
-            <div class:list={['card-visual', `visual-${(index % 3) + 1}`]} aria-hidden="true">
-              {article.data.image ? (
-                <img src={article.data.image} alt="" loading="lazy" />
-              ) : (
-                <>
-                  <span class="card-visual-index">{String(index + 1).padStart(2, '0')}</span>
-                  <span class="card-visual-orbit"></span>
-                  <span class="card-visual-caption">{article.data.category}</span>
-                </>
-              )}
-            </div>
-            <div class="card-meta">
-              <span>{article.data.category}</span>
-              <span>{article.data.readingTime} MIN READ</span>
-            </div>
-            <h3>{article.data.title}</h3>
-            <p>{article.data.excerpt}</p>
-            <span class="card-link">Explore article <span aria-hidden="true">↗</span></span>
-          </a>
-        ))}
-      </div>
+      <ArticleList articles={articles.slice(0, 3)} />
     ) : (
       <div class="empty-state">
-        <span class="empty-state-index">THE FIRST EDITION</span>
-        <h3>Something thoughtful is<br />taking shape.</h3>
-        <p>Our first stories on movement and robotic therapy are in the works.</p>
+        <span class="empty-state-index">COMING SOON</span>
+        <h3>Insights for ambitious practices.</h3>
+        <p>Our first stories on robotic therapy and practice growth are in the works.</p>
       </div>
     )}
   </section>
 
-  <section class="closing-note">
-    <span class="closing-mark" aria-hidden="true">R.</span>
-    <p>Movement is personal.<br /><em>So is the conversation around it.</em></p>
+  <section class="conversion-section">
+    <p class="marketing-kicker">LET'S BUILD WHAT'S NEXT</p>
+    <h2>Ready to explore the possibilities?</h2>
+    <p>Tell us about your practice and discover whether the RX2600 is the right fit.</p>
+    <a class="button button-accent" href={inquiryUrl}>Talk to our team <span aria-hidden="true">↗</span></a>
   </section>
 </SiteLayout>

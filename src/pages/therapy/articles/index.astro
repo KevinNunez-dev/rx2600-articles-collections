@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleList from '../../../components/ArticleList.astro';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+const articles = (await getCollection('articles'))
+  .filter(({ data }) => !data.draft && !data.seo.noindex)
+  .sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf());
+---
+
+<SiteLayout
+  title="Practice Growth and Robotic Therapy Articles | RX2600"
+  description="Explore practical articles on patient acquisition, robotic therapy, rehabilitation robotics, and practice growth."
+  image="/therapy/media/rx2600-clinicians.jpg"
+  imageAlt="Clinicians working with the RX2600 Therapeutic Robot"
+>
+  <section class="archive-hero">
+    <p class="marketing-kicker">THE RX2600 LIBRARY</p>
+    <h1>Ideas that move<br />your practice forward.</h1>
+    <p>Explore practical perspectives on robotic therapy, patient acquisition, and building a stronger practice.</p>
+    <form class="archive-search" action="/therapy/articles/" method="get" role="search">
+      <label for="archive-query">Search the library</label>
+      <div><input id="archive-query" name="q" type="search" placeholder="Search by topic or keyword" /><button type="submit">Search</button></div>
+    </form>
+  </section>
+  <section class="library-section archive-results" aria-labelledby="archive-heading">
+    <div class="section-heading">
+      <div><p class="marketing-kicker">EXPLORE THE LIBRARY</p><h2 id="archive-heading">All articles.</h2></div>
+      <p class="library-count" data-result-count aria-live="polite">{articles.length} ARTICLES</p>
+    </div>
+    {articles.length > 0 ? <ArticleList articles={articles} /> : <p>No articles have been published yet.</p>}
+    <p class="no-results" data-no-results hidden>No articles match your search. Try another keyword.</p>
+    <noscript><p>Search filtering requires JavaScript. All published articles are listed above.</p></noscript>
+  </section>
+  <section class="conversion-section">
+    <p class="marketing-kicker">LET'S BUILD WHAT'S NEXT</p>
+    <h2>Ready to explore the possibilities?</h2>
+    <p>Tell us about your practice and discover whether the RX2600 is the right fit.</p>
+    <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
+  </section>
+</SiteLayout>
+
+<script>
+  const searchForm = document.querySelector<HTMLFormElement>('.archive-search');
+  const searchInput = document.querySelector<HTMLInputElement>('#archive-query');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-article]')];
+  const count = document.querySelector<HTMLElement>('[data-result-count]');
+  const noResults = document.querySelector<HTMLElement>('[data-no-results]');
+
+  function filterArticles() {
+    if (!searchInput || !count || !noResults) return;
+    const terms = searchInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let visible = 0;
+    for (const card of cards) {
+      const matches = terms.every((term) => (card.dataset.search || '').includes(term));
+      card.hidden = !matches;
+      if (matches) visible++;
+    }
+    count.textContent = `${visible} ${visible === 1 ? 'ARTICLE' : 'ARTICLES'}`;
+    noResults.hidden = visible > 0 || terms.length === 0;
+  }
+
+  if (searchForm && searchInput) {
+    searchInput.value = new URLSearchParams(location.search).get('q') || '';
+    filterArticles();
+    searchInput.addEventListener('input', filterArticles);
+    searchForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const url = new URL(location.href);
+      const query = searchInput.value.trim();
+      if (query) url.searchParams.set('q', query);
+      else url.searchParams.delete('q');
+      history.replaceState(null, '', url);
+      filterArticles();
+    });
+  }
+</script>

@@ -10,8 +10,8 @@
   --panel: #191c1a;
   --line: rgba(235, 236, 228, .14);
   --muted: #9c9f96;
-  --accent: #e2a982;
-  --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --accent: #0fb4c6;
+  --serif: Arial, Helvetica, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -178,4 +178,173 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+/* Practice-marketing homepage */
+.site-header { position: relative; z-index: 5; height: 84px; background: #11151b; }
+.site-nav { gap: 29px; font-size: .79rem; }
+.site-nav .nav-cta { padding: 14px 20px; border: 0; border-radius: 6px; background: #0fb4c6; color: #071519; font-weight: 700; }
+.site-nav .nav-cta span { color: inherit; }
+.site-nav .nav-cta:hover { color: #071519; background: #61d6df; }
+.mobile-menu { display: none; }
+.marketing-hero { position: relative; min-height: min(690px, 78vw); overflow: hidden; display: flex; align-items: flex-end; background: #182121; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 14, 14, .92) 0%, rgba(7, 15, 15, .78) 35%, rgba(7, 15, 15, .15) 78%), linear-gradient(0deg, rgba(6, 14, 14, .42), transparent 55%); }
+.marketing-hero-content { position: relative; z-index: 1; width: min(720px, 70%); padding: 105px 0 100px; margin-left: max(7%, calc((100% - 1320px) / 2)); }
+.marketing-kicker { margin: 0 0 22px; color: #45d1df; font-size: .68rem; font-weight: 700; letter-spacing: .16em; line-height: 1.4; }
+.marketing-hero h1, .marketing-section-heading h2, .technology-copy h2, .partnership-intro h2, .conversion-section h2, .library-section .section-heading h2 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: -.045em; line-height: 1.05; }
+.marketing-hero h1 { margin: 0 0 24px; color: #fff; font-size: clamp(3.2rem, 6vw, 6rem); }
+.marketing-hero-content > p:not(.marketing-kicker) { max-width: 520px; color: #e4e9e6; font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.65; }
+.button-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.button { display: inline-flex; min-height: 50px; padding: 15px 20px; align-items: center; justify-content: center; gap: 22px; border: 1px solid transparent; border-radius: 6px; font-size: .84rem; font-weight: 700; line-height: 1.2; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.button-accent { background: #0fb4c6; color: #071519; }
+.button-accent:hover { background: #61d6df; }
+.button-outline { border-color: rgba(255,255,255,.7); color: #fff; background: rgba(8,16,16,.22); }
+.button-outline:hover { background: #fff; color: #14201e; }
+.button-dark { background: #10181d; color: #fff; }
+.button-dark:hover { background: #1d5f69; }
+.hero-photo-caption { position: absolute; right: 7%; bottom: 28px; color: #fff; font-size: .56rem; letter-spacing: .15em; }
+.business-strip { padding: 30px max(7%, calc((100% - 1320px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 25px; background: #d7eff0; color: #10181d; }
+.business-strip span { font-size: .62rem; font-weight: 700; letter-spacing: .13em; }
+.business-strip p { margin: 7px 0 0; font-size: 1.2rem; }
+.benefits-section, .audience-section { padding: 110px max(7%, calc((100% - 1320px) / 2)); background: #f7f8f9; color: #111820; }
+.marketing-section-heading { max-width: 760px; margin: 0 auto 50px; text-align: center; }
+.marketing-section-heading .marketing-kicker, .technology-copy .marketing-kicker, .partnership-intro .marketing-kicker { color: #087c89; }
+.marketing-section-heading h2, .technology-copy h2, .partnership-intro h2, .conversion-section h2, .library-section .section-heading h2 { margin: 0 0 20px; font-size: clamp(2.5rem, 4.3vw, 4.25rem); }
+.marketing-section-heading > p:not(.marketing-kicker) { max-width: 650px; margin: auto; color: #59645f; font-size: 1rem; line-height: 1.7; }
+.benefits-grid, .audience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.benefit-image, .audience-image { height: 230px; overflow: hidden; border-radius: 9px; background: #dce5df; }
+.benefit-image img, .audience-image img, .technology-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.benefit-image.image-product { background: #11272e; }
+.benefit-image.image-product img { object-fit: contain; }
+.card-number { display: block; margin-top: 22px; color: #087c89; font-size: .61rem; font-weight: 700; letter-spacing: .12em; }
+.benefit-card h3, .audience-card h3 { margin: 12px 0; font-size: 1.3rem; font-weight: 600; letter-spacing: -.035em; }
+.benefit-card p, .audience-card p { margin: 0; color: #59645f; font-size: .9rem; line-height: 1.65; }
+.technology-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 570px; background: #e8edef; color: #111820; }
+.technology-image { min-height: 570px; }
+.technology-copy { padding: 80px 14%; align-self: center; }
+.technology-copy > p:not(.marketing-kicker), .partnership-intro > p:not(.marketing-kicker) { max-width: 540px; color: #57645e; font-size: 1rem; line-height: 1.75; }
+.technology-copy .button, .partnership-intro .button { margin-top: 20px; }
+.audience-section { background: #fff; }
+.audience-card { display: block; border-radius: 9px; overflow: hidden; background: #f1f4f5; transition: transform .2s ease; }
+.audience-card:hover { transform: translateY(-4px); }
+.audience-card .audience-image { border-radius: 0; }
+.audience-card:last-child .audience-image { background: #11272e; }
+.audience-card:last-child .audience-image img { object-fit: contain; }
+.audience-card-copy { padding: 20px; }
+.audience-card-copy h3 { margin-top: 0; }
+.audience-card-copy > span { display: block; margin-top: 22px; color: #087c89; font-size: .8rem; font-weight: 700; }
+.partnership-section { padding: 110px max(7%, calc((100% - 1320px) / 2)); display: grid; grid-template-columns: 1fr 1fr; gap: 30px 12%; background: #e8edef; color: #111820; }
+.partnership-steps > div { display: flex; gap: 20px; padding: 25px 0; border-bottom: 1px solid #c8d1c9; }
+.partnership-steps > div:first-child { padding-top: 0; }
+.partnership-steps > div > span { color: #087c89; font-size: .72rem; font-weight: 700; }
+.partnership-steps h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.partnership-steps p { margin: 0; color: #57645e; font-size: .9rem; line-height: 1.6; }
+.program-note { grid-column: 1 / -1; margin: 15px 0 0; color: #626e68; font-size: .76rem; line-height: 1.6; }
+.library-section { background: #f7f8f9; color: #111820; }
+.library-section .section-heading h2 { margin-bottom: 0; }
+.library-section .marketing-kicker { color: #087c89; }
+.library-section .library-count { color: #68756d; }
+.library-section .empty-state { background: #edf2f3; border-color: #d4dfe1; }
+.library-section .empty-state-index { color: #087c89; }
+.library-section .empty-state h3 { color: #17231f; font-family: Arial, Helvetica, sans-serif; }
+.library-section .empty-state > p, .library-section .article-card > p { color: #59645f; }
+.library-section .article-card h3 { color: #17231f; font-family: Arial, Helvetica, sans-serif; }
+.library-section .card-meta span:first-child, .library-section .card-link span { color: #087c89; }
+.library-section .card-link { color: #17231f; border-color: #bac9c0; }
+.conversion-section { padding: 105px 7%; text-align: center; background: #071217; }
+.conversion-section h2 { max-width: 740px; margin-right: auto; margin-left: auto; }
+.conversion-section > p:not(.marketing-kicker) { color: #c3d0c8; line-height: 1.7; }
+.conversion-section .button { margin-top: 20px; }
+@media (max-width: 900px) {
+  .site-nav { gap: 15px; }
+  .benefits-grid, .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; }
+  .marketing-hero { min-height: 590px; }
+  .technology-copy { padding: 65px 9%; }
+}
+@media (max-width: 640px) {
+  .site-header { height: 70px; padding: 0 7%; }
+  .site-nav { display: none; }
+  .mobile-menu { display: block; }
+  .mobile-menu summary { padding: 10px 14px; border: 1px solid #76968b; border-radius: 6px; color: #fff; cursor: pointer; font-size: .8rem; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu nav { position: absolute; right: 7%; top: 62px; min-width: 220px; padding: 12px; border: 1px solid #40534c; border-radius: 8px; background: #152320; box-shadow: 0 14px 30px rgba(0,0,0,.25); }
+  .mobile-menu nav a { display: block; padding: 12px; color: #fff; font-size: .9rem; }
+  .marketing-hero { min-height: 650px; align-items: end; }
+  .hero-photo { object-position: 60% center; }
+  .hero-shade { background: linear-gradient(0deg, rgba(6,14,14,.96), rgba(6,14,14,.6) 65%, rgba(6,14,14,.1)); }
+  .marketing-hero-content { width: auto; margin: 0; padding: 130px 7% 85px; }
+  .marketing-hero h1 { font-size: clamp(3.1rem, 11vw, 4.5rem); }
+  .hero-photo-caption { left: 7%; right: auto; font-size: .5rem; }
+  .business-strip { padding: 27px 7%; align-items: flex-start; flex-direction: column; }
+  .benefits-section, .audience-section { padding: 75px 7%; }
+  .marketing-section-heading { margin-bottom: 35px; text-align: left; }
+  .benefits-grid, .audience-grid { gap: 26px 14px; }
+  .benefit-image, .audience-image { height: 160px; }
+  .benefit-card h3, .audience-card h3 { font-size: 1.08rem; }
+  .benefit-card p, .audience-card p { font-size: .83rem; }
+  .audience-card-copy { padding: 16px; }
+  .technology-section { grid-template-columns: 1fr; }
+  .technology-image { min-height: 350px; max-height: 450px; }
+  .technology-copy { padding: 65px 7%; }
+  .partnership-section { padding: 75px 7%; grid-template-columns: 1fr; gap: 40px; }
+  .program-note { grid-column: auto; margin: 0; }
+  .conversion-section { padding: 75px 7%; }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.header-search { display: flex; align-items: center; border: 1px solid #536066; border-radius: 6px; overflow: hidden; }
+.header-search input, .header-search button { border: 0; background: transparent; color: #fff; font: inherit; }
+.header-search input { width: 118px; min-width: 0; padding: 10px 0 10px 11px; }
+.header-search input::placeholder { color: #c4ced0; }
+.header-search button { padding: 9px 11px; cursor: pointer; color: #46d3e2; }
+.header-search input:focus-visible, .archive-search input:focus-visible, .mobile-search input:focus-visible { outline: 2px solid #0fb4c6; outline-offset: -2px; }
+.mobile-search { padding: 12px; color: #fff; }
+.mobile-search label { display: block; margin-bottom: 8px; font-size: .75rem; }
+.mobile-search div { display: flex; }
+.mobile-search input { width: 125px; min-width: 0; padding: 9px; border: 0; border-radius: 4px 0 0 4px; font: inherit; }
+.mobile-search button { padding: 9px; border: 0; border-radius: 0 4px 4px 0; background: #0fb4c6; color: #071519; font-weight: 700; cursor: pointer; }
+.archive-link { display: inline-block; margin-top: 20px; color: #087c89; font-size: .86rem; font-weight: 700; }
+.archive-hero { padding: 110px max(7%, calc((100% - 1320px) / 2)); background: radial-gradient(ellipse at 82% 30%, #123943, transparent 55%), #071217; }
+.archive-hero h1 { max-width: 800px; margin: 0 0 23px; color: #fff; font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: -.05em; line-height: 1.05; }
+.archive-hero > p:not(.marketing-kicker) { max-width: 600px; color: #c6d3d5; font-size: 1.05rem; line-height: 1.7; }
+.archive-search { max-width: 520px; margin-top: 36px; }
+.archive-search label { display: block; margin-bottom: 9px; font-size: .8rem; font-weight: 700; }
+.archive-search div { display: flex; }
+.archive-search input { width: 100%; min-width: 0; padding: 15px; border: 0; border-radius: 6px 0 0 6px; color: #10181d; background: #fff; font: inherit; }
+.archive-search button { padding: 15px 20px; border: 0; border-radius: 0 6px 6px 0; background: #0fb4c6; color: #071519; font: inherit; font-weight: 700; cursor: pointer; }
+.archive-results .article-grid { row-gap: 55px; }
+.article-card[hidden], .no-results[hidden] { display: none; }
+.no-results { padding: 35px; border: 1px solid #d4dfe1; background: #edf2f3; color: #33434a; }
+.article-page { background: #f7f8f9; color: #111820; }
+.article-topline { color: #52636a; }
+.article-topline span, .article-header .eyebrow, .takeaways-label { color: #087c89; }
+.article-header h1 { color: #111820; font-weight: 700; letter-spacing: -.045em; }
+.article-deck { color: #4a5960; }
+.article-byline { color: #52636a; }
+.article-cover { border-radius: 10px; }
+.takeaways { background: #e8edef; border-color: #d3dfe2; border-radius: 8px; }
+.takeaways li { border-color: #cad7da; color: #33434a; }
+.prose { color: #33434a; }
+.prose h2, .prose h3 { color: #111820; font-weight: 700; }
+.prose a { color: #087c89; }
+.prose blockquote { color: #33434a; }
+.article-faq details, .article-faq details:last-child, .review-note, .health-note { border-color: #cad7da; }
+.article-faq summary { color: #111820; }
+.article-faq details p, .review-note, .health-note { color: #52636a; }
+@media (max-width: 1100px) {
+  .site-nav { gap: 12px; }
+  .header-search input { width: 100px; }
+}
+@media (max-width: 800px) {
+  .site-nav { display: none; }
+  .mobile-menu { display: block; }
+  .mobile-menu summary { padding: 10px 14px; border: 1px solid #76968b; border-radius: 6px; color: #fff; cursor: pointer; font-size: .8rem; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu nav { position: absolute; right: 7%; top: 62px; min-width: 240px; padding: 12px; border: 1px solid #40534c; border-radius: 8px; background: #11151b; box-shadow: 0 14px 30px rgba(0,0,0,.25); }
+  .mobile-menu nav a { display: block; padding: 12px; color: #fff; font-size: .9rem; }
+}
+@media (max-width: 640px) {
+  .archive-hero { padding: 80px 7%; }
+  .archive-hero h1 { font-size: clamp(2.8rem, 11vw, 4rem); }
 }

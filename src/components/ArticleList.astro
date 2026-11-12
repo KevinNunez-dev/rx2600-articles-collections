@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  articles: CollectionEntry<'articles'>[];
+}
+const { articles } = Astro.props;
+---
+
+<div class="article-grid">
+  {articles.map((article, index) => (
+    <a
+      class="article-card"
+      href={`/therapy/${article.id}/`}
+      data-article
+      data-search={`${article.data.title} ${article.data.description} ${article.data.excerpt} ${article.data.category} ${article.data.tags.join(' ')}`.toLowerCase()}
+    >
+      <div class:list={['card-visual', `visual-${(index % 3) + 1}`]} aria-hidden="true">
+        {article.data.image ? <img src={article.data.image} alt="" loading="lazy" /> : <span class="card-visual-caption">{article.data.category}</span>}
+      </div>
+      <div class="card-meta"><span>{article.data.category}</span><span>{article.data.readingTime} MIN READ</span></div>
+      <h3>{article.data.title}</h3>
+      <p>{article.data.excerpt}</p>
+      <span class="card-link">Explore article <span aria-hidden="true">↗</span></span>
+    </a>
+  ))}
+</div>
