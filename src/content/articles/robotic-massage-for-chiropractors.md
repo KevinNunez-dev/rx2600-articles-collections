@@ -18,16 +18,16 @@ keyTakeaways: []
 landing:
   eyebrow: "FOR CHIROPRACTIC PRACTICES"
   heroLead: "Add a new dimension to your practice with clinician-guided robotic muscular therapy designed to complement your approach."
-  audienceTitle: "A distinctive addition to your practice."
+  audienceTitle: "Your approach to care, with a new advantage."
   audienceIntro: "Bring robotic technology into the conversation around muscular care while keeping your clinical judgment at the center."
   benefits:
-    - title: "Complement your approach"
+    - title: "Build on your approach"
       description: "Add muscular therapy alongside your existing services, guided by each individual's needs."
-    - title: "Create a distinctive offering"
+    - title: "Offer something distinctive"
       description: "Give patients a new way to experience technology-forward care in your practice."
-    - title: "Build business growth"
+    - title: "Add a new revenue avenue"
       description: "Develop a cash-pay service around your patient demand, pricing, and costs."
-  fitTitle: "Your expertise. A new tool."
+  fitTitle: "Clinical judgment meets robotic precision."
   fitText: "The RX2600 brings clinician-guided muscular therapy into your practice, with your professional judgment and applicable scope-of-practice requirements at the center."
   fitPoints:
     - "A complement to existing care"

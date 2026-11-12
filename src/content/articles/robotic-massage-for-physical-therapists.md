@@ -18,16 +18,16 @@ keyTakeaways: []
 landing:
   eyebrow: "FOR PHYSICAL THERAPY PRACTICES"
   heroLead: "Bring a technology-forward muscular therapy offering into your practice—with your clinical expertise at the center."
-  audienceTitle: "More possibilities for your practice."
+  audienceTitle: "Your clinical expertise. A new dimension of care."
   audienceIntro: "The RX2600 is a clinician-used tool designed to bring robotic precision to muscular therapy and soft tissue care."
   benefits:
-    - title: "Complement your care"
+    - title: "Add to your approach"
       description: "Bring a muscular therapy tool alongside assessment, movement, and your existing treatment plans."
-    - title: "Differentiate the experience"
+    - title: "Give patients something distinctive"
       description: "Introduce a distinctive, technology-forward service to people looking for care."
-    - title: "Build a revenue stream"
+    - title: "Create a new revenue avenue"
       description: "Develop a cash-pay offering with a business model built for practice growth."
-  fitTitle: "Built to work alongside your expertise."
+  fitTitle: "A powerful tool. Your clinical judgment."
   fitText: "The RX2600 supports clinician-guided muscular therapy. Your team determines how the system fits each patient's assessment and individual plan."
   fitPoints:
     - "A robotic tool for soft tissue care"

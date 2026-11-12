@@ -486,3 +486,39 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
   .journal-rail-heading { margin-top: 58px; align-items: end; }
   .journal-rail { grid-auto-columns: minmax(220px, 82%); gap: 16px; }
 }
+
+html { scroll-padding-top: 110px; }
+.site-header {
+  position: sticky;
+  top: 12px;
+  z-index: 30;
+  width: min(1320px, calc(100% - 32px));
+  height: 72px;
+  margin: 12px auto;
+  padding: 0 16px 0 22px;
+  gap: 24px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 20px;
+  background: #11191d;
+  box-shadow: 0 8px 26px rgba(0,0,0,.24);
+}
+.site-header > .wordmark { flex: none; }
+.site-header .wordmark img { width: 120px; }
+.site-nav { justify-content: flex-end; gap: clamp(14px, 1.7vw, 26px); color: #e2ebec; }
+.site-nav > a { white-space: nowrap; }
+.site-nav .nav-cta { border-radius: 12px; }
+.header-search { border-radius: 10px; }
+@media (max-width: 1050px) {
+  .site-header .site-nav { display: none; }
+  .site-header .mobile-menu { display: block; }
+  .mobile-menu summary { padding: 11px 16px; border: 1px solid #536e73; border-radius: 10px; color: #fff; cursor: pointer; font-size: .85rem; font-weight: 700; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu nav { position: absolute; top: calc(100% + 8px); right: 0; width: min(320px, 100%); max-height: calc(100vh - 110px); max-height: calc(100dvh - 110px); overflow-y: auto; padding: 12px; border: 1px solid #40565b; border-radius: 14px; background: #112126; box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+  .mobile-menu nav a { display: block; padding: 12px; color: #fff; font-size: .9rem; }
+  .mobile-menu nav a:hover { color: #65dce5; }
+}
+@media (max-width: 640px) {
+  html { scroll-padding-top: 96px; }
+  .site-header { top: 10px; width: calc(100% - 24px); height: 64px; margin: 10px auto; padding: 0 12px 0 16px; border-radius: 17px; }
+  .site-header .wordmark img { width: 112px; }
+}

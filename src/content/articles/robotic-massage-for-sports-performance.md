@@ -18,16 +18,16 @@ keyTakeaways: []
 landing:
   eyebrow: "FOR SPORTS PERFORMANCE FACILITIES"
   heroLead: "Give your active community clinician-guided robotic muscular therapy—and give your facility a distinctive new service."
-  audienceTitle: "Built for people in motion."
+  audienceTitle: "For active people. And forward-thinking teams."
   audienceIntro: "From performance facilities to practices serving active clients, the RX2600 brings a technology-forward approach to muscular therapy."
   benefits:
-    - title: "Support your care offering"
+    - title: "Expand the care experience"
       description: "Bring muscular therapy to individualized care plans for active people."
-    - title: "Stand out with technology"
+    - title: "Bring technology into focus"
       description: "Introduce a distinctive experience that pairs robotics with qualified professional guidance."
-    - title: "Build a business case"
+    - title: "Put growth in motion"
       description: "Build your new service around demand, capacity, pricing, and costs."
-  fitTitle: "Designed for your team and the people you serve."
+  fitTitle: "Professional guidance for people on the move."
   fitText: "The RX2600 is a clinician-used tool for muscular therapy. Suitability depends on the individual, the qualified professional, and the facility's requirements."
   fitPoints:
     - "A technology-forward muscular therapy option"
