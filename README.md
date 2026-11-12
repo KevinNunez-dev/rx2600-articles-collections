@@ -36,6 +36,8 @@ The searchable article archive is `/therapy/articles/`. Header searches use the 
 
 The homepage journal displays the five most recently updated published articles in a featured grid and all published articles in a horizontally scrollable rail. Drafts and noindex entries are excluded; the rail remains scrollable without JavaScript.
 
+The business landing page is `/therapy/business/`. Its program terms, cost information, financial example, clinical claims, and media require review before publication; request current fee and eligibility details from RX2600 rather than assuming an unpublished amount.
+
 Article pages render key takeaways as cards, Markdown level-two headings as an on-page contents menu, FAQ entries as expandable questions, and published entries listed in `related` as linked cards. Use Markdown lists to make practical steps scannable; draft and noindex articles do not appear in related cards.
 
 Audience-specific marketing pages can use the optional `landing` frontmatter fields to render a shorter practice-landing template. Their revenue scenario is illustrative gross revenue, not profit or a forecast; verify program terms and all product or clinical claims before publishing. The decorative Three.js animation is not a representation of the robot and falls back to static artwork when reduced motion is requested or WebGL is unavailable.

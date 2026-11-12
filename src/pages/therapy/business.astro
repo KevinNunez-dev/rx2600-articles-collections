@@ -1,0 +1,148 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Icon from '../../components/Icon.astro';
+import '../../styles/business.css';
+
+const audiences = [
+  { title: 'Physical therapy', description: 'Bring a robotic muscular therapy tool alongside your clinical expertise.', image: '/therapy/media/rx2600-clinicians.jpg', href: '/therapy/robotic-massage-for-physical-therapists/' },
+  { title: 'Chiropractic', description: 'Add a distinctive, clinician-guided service to your approach to care.', image: '/therapy/media/rpt-treatment.jpg', href: '/therapy/robotic-massage-for-chiropractors/' },
+  { title: 'Sports performance', description: 'Offer muscular therapy to the active communities your team serves.', image: '/therapy/media/rx2600-showcase.jpg', href: '/therapy/robotic-massage-for-sports-performance/' },
+];
+const faq = [
+  { question: 'Does my practice need to purchase the robot?', answer: 'RX2600 describes the Growth Partner Program as providing the robot without a purchase. Program eligibility and terms apply; request current written details from the RX2600 team.' },
+  { question: 'What does the program cost?', answer: 'RX2600 describes a flat-rate operational fee. The amount is not published here; ask the team for current pricing and written terms. Your practice may also incur staffing, space, marketing, and other costs.' },
+  { question: 'Is training included?', answer: 'RX2600 describes training and implementation support as part of the program. Ask the team for the current details and requirements for your setting.' },
+  { question: 'Does RX2600 replace a clinician?', answer: 'No. The RX2600 is a tool used by clinicians for muscular therapy. Assessment, patient selection, and professional judgment remain central to care.' },
+  { question: 'How much revenue will my practice earn?', answer: 'Revenue varies with demand, completed sessions, pricing, and capacity. Gross revenue is not profit; include operational fees and all other costs in your plan. No earnings are guaranteed.' },
+];
+---
+
+<SiteLayout
+  title="RX2600 for Business | Robotic Therapy for Practices"
+  description="Discover the RX2600 Growth Partner Program, clinician-guided robotic therapy, operating costs, and practice revenue planning."
+  image="/therapy/media/rx2600-clinicians.jpg"
+  imageAlt="Clinicians working with RX2600 Therapeutic Robot systems"
+>
+  <div class="business-page">
+    <section class="business-hero">
+      <img src="/therapy/media/rx2600-clinicians.jpg" alt="" width="1024" height="683" fetchpriority="high" />
+      <div class="business-hero-shade"></div>
+      <div class="business-hero-copy">
+        <p class="business-kicker">RX2600 FOR BUSINESS</p>
+        <h1>Better tools for care.<br />More room for growth.</h1>
+        <p>Bring clinician-guided robotic therapy into your practice and build a distinctive service around the expertise your patients already trust.</p>
+        <div class="button-group">
+          <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
+          <a class="button button-outline" href="#program">Explore the program <Icon name="arrow-down" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-intro business-wrap" aria-labelledby="business-benefits">
+      <div class="business-section-heading">
+        <p class="business-kicker">A NEW DIMENSION FOR YOUR PRACTICE</p>
+        <h2 id="business-benefits">Your expertise does more with the right tools.</h2>
+        <p>The RX2600 brings robotic technology and human judgment together for muscular therapy and soft tissue care.</p>
+      </div>
+      <div class="business-benefits">
+        <article>
+          <span class="business-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11"></circle><circle cx="16" cy="16" r="5"></circle><path d="M16 1v6M16 25v6M1 16h6M25 16h6"></path></svg></span>
+          <span class="business-index">01 / CARE</span><h3>Extend your approach</h3>
+          <p>Bring clinician-guided muscular therapy into the services your team provides.</p>
+        </article>
+        <article>
+          <span class="business-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M4 23h24M7 19l6-6 4 4 8-9M20 8h5v5"></path></svg></span>
+          <span class="business-index">02 / BUSINESS</span><h3>Develop a new service</h3>
+          <p>Build a cash-pay offering and plan around your own pricing, demand, and costs.</p>
+        </article>
+        <article>
+          <span class="business-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3 28 10v12l-12 7L4 22V10zM4 10l12 7 12-7M16 17v12"></path></svg></span>
+          <span class="business-index">03 / EXPERIENCE</span><h3>Stand apart with technology</h3>
+          <p>Give patients a distinctive experience that keeps your clinical judgment at the center.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="business-product">
+      <div class="business-product-image"><img src="/therapy/media/rpt-treatment.jpg" alt="A clinician using the RX2600 Therapeutic Robot" loading="lazy" /></div>
+      <div class="business-product-copy">
+        <p class="business-kicker">TECHNOLOGY WITH A HUMAN TOUCH</p>
+        <h2>Built to work with the people who know care.</h2>
+        <p>The RX2600 Therapeutic Robot is a clinician-used tool that assists with muscular therapy and soft tissue mobilization. Your team brings the assessment, expertise, and individual care plan.</p>
+        <ul><li><Icon name="check" /> Clinician-guided therapy</li><li><Icon name="check" /> A distinctive addition to your services</li><li><Icon name="check" /> Training and implementation support described by RX2600</li></ul>
+        <a class="business-link" href="https://rx2600.com/">Meet the RX2600 <Icon /></a>
+      </div>
+    </section>
+
+    <section class="business-audiences business-wrap">
+      <div class="business-section-heading">
+        <p class="business-kicker">MADE FOR YOUR PRACTICE</p>
+        <h2>Different specialties. A shared focus on care.</h2>
+        <p>Bring robotic muscular therapy into the setting and services your team knows best.</p>
+      </div>
+      <div class="business-audience-grid">
+        {audiences.map((audience) => (
+          <a class="business-audience-card" href={audience.href}>
+            <img src={audience.image} alt="" loading="lazy" />
+            <div><h3>{audience.title}</h3><p>{audience.description}</p><span>Discover more <Icon /></span></div>
+          </a>
+        ))}
+      </div>
+      <p class="business-audience-note">Serving another clinical or wellness setting? <a href="https://rx2600.com/#contact">Talk with our team <Icon /></a></p>
+    </section>
+
+    <section class="business-program business-wrap" id="program">
+      <div class="business-program-header">
+        <div><p class="business-kicker">THE GROWTH PARTNER PROGRAM</p><h2>A partnership built around your practice.</h2></div>
+        <p>RX2600 describes a program that provides the robot without a purchase, with a flat-rate operational fee and training and implementation support. Request current written terms, eligibility, and fees from our team.</p>
+      </div>
+      <div class="business-program-grid">
+        <article><span>01</span><h3>No robot purchase</h3><p>The described program provides the robot without a purchase by the clinician. Eligibility and terms apply.</p></article>
+        <article><span>02</span><h3>Flat-rate operational fee</h3><p>Ask for the current fee, payment schedule, and what it covers. The fee amount is not published on this page.</p></article>
+        <article><span>03</span><h3>Training and implementation</h3><p>RX2600 describes training and implementation support. Confirm the current scope and requirements with the team.</p></article>
+      </div>
+      <p class="business-fine-print">Your practice may also incur costs for staff, space, marketing, taxes, and other operations. Program availability and terms may vary.</p>
+      <a class="button button-accent" href="https://rx2600.com/#contact">Request program details <Icon /></a>
+    </section>
+
+    <section class="business-economics business-wrap">
+      <div class="business-economics-copy">
+        <p class="business-kicker">PLAN FOR GROWTH</p>
+        <h2>Make the opportunity your own.</h2>
+        <p>Build a realistic business model around the people you serve, your schedule, and your pricing. Start with completed sessions, then account for the full cost of operating your service.</p>
+        <a class="business-link" href="/therapy/increase-revenue-with-robotic-therapy/">Explore the revenue guide <Icon /></a>
+      </div>
+      <div class="business-economics-card">
+        <p class="business-kicker">ILLUSTRATIVE SCENARIO</p>
+        <p class="business-revenue">$72,000</p>
+        <p>Example annual <strong>gross session revenue</strong></p>
+        <div class="business-equation">
+          <div><strong>10</strong><span>sessions / week</span></div><span aria-hidden="true">×</span>
+          <div><strong>$150</strong><span>per session</span></div><span aria-hidden="true">×</span>
+          <div><strong>48</strong><span>weeks / year</span></div>
+        </div>
+        <p class="business-fine-print">Illustration only, not a forecast or guarantee. Gross revenue is not profit and excludes operational fees, staffing, space, marketing, taxes, cancellations, and other costs. Results vary.</p>
+      </div>
+    </section>
+
+    <section class="business-steps business-wrap">
+      <div class="business-section-heading"><p class="business-kicker">GETTING STARTED</p><h2>From first conversation to your next service.</h2></div>
+      <div class="business-step-grid">
+        <article><span>01</span><h3>Tell us about your practice</h3><p>Share your services, goals, and the community you serve.</p></article>
+        <article><span>02</span><h3>Review the details</h3><p>Discuss the technology, program eligibility, fees, and written terms with our team.</p></article>
+        <article><span>03</span><h3>Plan implementation</h3><p>Learn about training, space, staffing, and the steps to introduce your service.</p></article>
+      </div>
+    </section>
+
+    <section class="business-faq business-wrap" aria-labelledby="business-faq-title">
+      <div><p class="business-kicker">THE DETAILS</p><h2 id="business-faq-title">Good questions.<br />Clear answers.</h2><p>Everything starts with a conversation. Our team can provide the current program details.</p></div>
+      <div class="business-faq-list">{faq.map((item) => <details><summary>{item.question}<span aria-hidden="true"></span></summary><p>{item.answer}</p></details>)}</div>
+    </section>
+    <section class="conversion-section business-conversion">
+      <p class="marketing-kicker">LET'S BUILD WHAT'S NEXT</p>
+      <h2>Your practice. Your next move.</h2>
+      <p>Talk to the RX2600 team about bringing robotic therapy into your business.</p>
+      <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
+    </section>
+  </div>
+</SiteLayout>
