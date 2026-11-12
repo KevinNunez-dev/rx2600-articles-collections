@@ -23,6 +23,10 @@ faq:
     answer: "Rehabilitation robotics is a broad term for robotic technologies used in different rehabilitation and care settings. Individual systems differ in intended use, required training, and clinical application."
   - question: "Will rehabilitation robotics guarantee more revenue?"
     answer: "No. Financial results depend on factors including demand, pricing, capacity, costs, and how the service is integrated into the practice."
+  - question: "Are all rehabilitation robots designed for the same purpose?"
+    answer: "No. Systems have different intended uses, settings, and training requirements. Each device should be evaluated on its own merits."
+  - question: "What should a practice ask a robotics supplier?"
+    answer: "Ask about the system's intended use, training, implementation, maintenance, fees, support, and the practice's responsibilities."
 related: [increase-revenue-with-robotic-therapy, patient-acquisition-system]
 seo:
   title: "Increase Revenue with Rehabilitation Robotics"
@@ -58,6 +62,13 @@ An initial model can be simple: estimate paid sessions per week, multiply by the
 
 Build several scenarios using your own expected demand, appointment availability, and pricing. Account for missed appointments, changing demand, and time needed to introduce the service. If a robotic session would take the place of another appointment, include the revenue and costs of the displaced service when comparing options.
 
+**Useful inputs for your scenarios:**
+
+- The number of completed sessions your practice can realistically accommodate.
+- Your proposed price and the number of operating weeks.
+- Cancellations, changes in demand, and time needed to introduce the service.
+- Direct costs and the effect on existing appointments.
+
 The output should help frame a decision, not create false precision. If you lack reliable information about demand or expenses, make that uncertainty visible. Review your assumptions regularly and seek financial advice specific to your business.
 
 ## Calculate the full cost of adoption
@@ -79,6 +90,13 @@ Involve clinicians and front-desk staff early. Their insight can reveal issues a
 ## Evaluate technology and support
 
 When considering rehabilitation robotics for practice growth, ask how the supplier supports implementation and ongoing use. Request clear documentation about training, intended use, maintenance, support, and the responsibilities of the practice. Understand the process for getting help when equipment or workflow questions arise.
+
+**A supplier conversation should cover:**
+
+- Intended use and the qualifications required in your setting.
+- Training and implementation support for your team.
+- Current fees, maintenance responsibilities, and contract terms.
+- How to obtain ongoing product support.
 
 Assess product information and any clinical evidence in context. Results reported for one device, population, or protocol cannot automatically be applied to another. Avoid using the claims of a different manufacturer to describe your own offering, even when both products are discussed under the umbrella of robotic therapy.
 

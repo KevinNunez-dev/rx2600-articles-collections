@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import ArticleList from '../../components/ArticleList.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) =>
@@ -15,7 +16,12 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const { Content } = await render(article);
+const { Content, headings } = await render(article);
+const sections = headings.filter((heading) => heading.depth === 2);
+const relatedIds = article.data.related || [];
+const relatedArticles = (await getCollection('articles', ({ data }) => !data.draft && !data.seo.noindex))
+  .filter((entry) => entry.id !== article.id && relatedIds.includes(entry.id))
+  .sort((a, b) => relatedIds.indexOf(a.id) - relatedIds.indexOf(b.id));
 const canonical = article.data.seo.canonical || new URL(`/therapy/${article.id}/`, Astro.site).toString();
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -40,40 +46,67 @@ const articleSchema = {
 >
   <JsonLd data={articleSchema} />
   <article class="article-page">
-    <div class="article-topline">
-      <a href="/therapy/articles/">← All articles</a>
-      <span>{article.data.category}</span>
-    </div>
-    <header class="article-header">
-      <p class="eyebrow"><span class="eyebrow-line"></span> {article.data.contentType}</p>
-      <h1>{article.data.title}</h1>
-      <p class="article-deck">{article.data.description}</p>
-      <div class="article-byline">
-        <span>By {article.data.author}</span>
-        <span>{article.data.readingTime} min read</span>
-        <time datetime={article.data.updatedAt.toISOString()}>
-          Updated {article.data.updatedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </time>
+    <header class:list={['article-hero', { 'article-hero-no-image': !article.data.image }]}>
+      <div class="article-hero-copy">
+        <a class="article-back" href="/therapy/articles/">← Back to insights</a>
+        <p class="article-category">{article.data.category} <span aria-hidden="true">/</span> {article.data.contentType}</p>
+        <h1>{article.data.title}</h1>
+        <p class="article-deck">{article.data.description}</p>
+        <div class="article-byline">
+          <span>By {article.data.author}</span>
+          <span>{article.data.readingTime} min read</span>
+          <time datetime={article.data.updatedAt.toISOString()}>
+            Updated {article.data.updatedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        </div>
       </div>
+      {article.data.image && <div class="article-hero-image"><img src={article.data.image} alt={article.data.imageAlt} /></div>}
     </header>
-    {article.data.image && (
-      <img class="article-cover" src={article.data.image} alt={article.data.imageAlt} />
-    )}
-    <div class="article-layout">
-      <aside class="takeaways">
-        <p class="takeaways-label">IN THIS STORY</p>
-        <ul>
-          {article.data.keyTakeaways.map((item) => <li>{item}</li>)}
+
+    {article.data.keyTakeaways.length > 0 && (
+      <section class="article-highlights" aria-labelledby="highlights-heading">
+        <div class="article-section-heading">
+          <p class="marketing-kicker">THE SHORT VERSION</p>
+          <h2 id="highlights-heading">Key ideas, at a glance.</h2>
+        </div>
+        <ul class="highlight-grid">
+          {article.data.keyTakeaways.map((item, index) => (
+            <li class="highlight-card">
+              <span class="highlight-number">{String(index + 1).padStart(2, '0')}</span>
+              <p>{item}</p>
+            </li>
+          ))}
         </ul>
-      </aside>
-      <div class="prose">
+      </section>
+    )}
+
+    <div class="article-reading-layout">
+      {sections.length > 0 && (
+        <aside class="article-sidebar">
+          <nav aria-label="On this page">
+            <p class="article-sidebar-label">ON THIS PAGE</p>
+            <ol>
+              {sections.map((section) => <li><a href={`#${section.slug}`}>{section.text}</a></li>)}
+              {article.data.faq.length > 0 && <li><a href="#article-faq">Frequently asked questions</a></li>}
+            </ol>
+          </nav>
+          <div class="article-sidebar-cta">
+            <p>Make your next move.</p>
+            <a href="https://rx2600.com/#contact">Talk to our team ↗</a>
+          </div>
+        </aside>
+      )}
+      <div class="article-reading-content">
+        <div class="prose article-prose">
         <Content />
+        </div>
         {article.data.faq.length > 0 && (
-          <section class="article-faq">
-            <h2>Questions, considered.</h2>
+          <section class="article-faq" id="article-faq">
+            <p class="marketing-kicker">GOOD TO KNOW</p>
+            <h2>Frequently asked questions.</h2>
             {article.data.faq.map((item) => (
               <details>
-                <summary>{item.question}</summary>
+                <summary>{item.question}<span aria-hidden="true"></span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -89,6 +122,15 @@ const articleSchema = {
       </div>
     </div>
   </article>
+  {relatedArticles.length > 0 && (
+    <section class="library-section related-section">
+      <div class="section-heading">
+        <div><p class="marketing-kicker">KEEP EXPLORING</p><h2>More ideas for your practice.</h2></div>
+        <a class="archive-link" href="/therapy/articles/">View all articles ↗</a>
+      </div>
+      <ArticleList articles={relatedArticles} />
+    </section>
+  )}
   <section class="conversion-section">
     <p class="marketing-kicker">EXPLORE THE RX2600</p>
     <h2>See what robotic therapy could bring to your practice.</h2>

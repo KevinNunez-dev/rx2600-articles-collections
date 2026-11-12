@@ -34,6 +34,8 @@ The three practice-growth articles are configured for production at their own `/
 
 The searchable article archive is `/therapy/articles/`. Header searches use the `q` query parameter; filtering runs in the browser over published article titles, descriptions, categories, and tags. Without JavaScript, the archive still lists all published articles.
 
+Article pages render key takeaways as cards, Markdown level-two headings as an on-page contents menu, FAQ entries as expandable questions, and published entries listed in `related` as linked cards. Use Markdown lists to make practical steps scannable; draft and noindex articles do not appear in related cards.
+
 ## Build and preview
 
 ```powershell

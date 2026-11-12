@@ -23,6 +23,10 @@ faq:
     answer: "It is a repeatable process for helping appropriate prospective patients discover a practice, understand its services, make contact, and schedule an appointment."
   - question: "Can robotic therapy be part of a patient acquisition strategy?"
     answer: "A clinician-guided robotic therapy service may help a practice explain a distinctive offering, but interest and outcomes depend on local demand, appropriate use, and the overall patient experience."
+  - question: "What should a practice measure in its patient acquisition process?"
+    answer: "Useful measures include inquiry sources, response time, appointments scheduled and attended, and the cost of marketing activities."
+  - question: "Where should a practice start?"
+    answer: "Map how people find the practice, ask questions, and schedule a visit. Then address the most important gaps in visibility, communication, and follow-up."
 related: [increase-revenue-with-robotic-therapy, increase-revenue-with-rehabilitation-robotics]
 seo:
   title: "Patient Aquisition System for Practice Growth"
@@ -41,6 +45,13 @@ A patient acquisition system brings your practice's marketing and intake activit
 For example, someone might find a local search result, visit a page describing your practice, read about your clinicians, and submit a question. Your team then responds, explains the available next steps, and helps the person determine whether an appointment makes sense. Each handoff matters. A strong website cannot compensate for an unanswered inquiry, just as a friendly team cannot help someone who cannot find the practice.
 
 Start by mapping your current patient journey. Identify how people hear about you, what questions they ask, where inquiries arrive, and how appointments are scheduled. This simple map will show where your practice already performs well and where attention may be needed.
+
+**A practical patient journey includes:**
+
+- **Discovery:** a prospective patient finds your practice through search, a referral, or community outreach.
+- **Understanding:** clear service information answers their initial questions.
+- **Contact:** a simple call or inquiry form connects them with your team.
+- **Follow-through:** a timely response helps them understand their next step.
 
 ## Define the patients you can serve
 
@@ -85,6 +96,13 @@ For the business perspective, read our guides to [increasing revenue with roboti
 ## Measure and improve the patient journey
 
 Track a few measures consistently: inquiries by source, response time, appointments scheduled, appointments attended, and the cost of each marketing activity. When your systems allow it, compare scheduled appointments with the number of inquiries from the same period. Be clear about definitions so the numbers remain useful.
+
+**Consider tracking:**
+
+- The source and number of inquiries.
+- How quickly your team responds.
+- Scheduled and attended appointments.
+- Marketing spend alongside the appointments it contributes.
 
 Review the journey at regular intervals. If many people visit a page but few contact the practice, the information or next step may need work. If inquiries arrive but appointments are not scheduled, examine response times, availability, and the questions your team receives. These signals help identify opportunities; they do not prove a single cause on their own.
 

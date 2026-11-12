@@ -23,6 +23,10 @@ faq:
     answer: "It may create a new service opportunity, but actual revenue depends on patient demand, pricing, available appointments, costs, and the program terms applicable to the practice."
   - question: "Does the RX2600 replace the clinician?"
     answer: "No. The RX2600 is a tool used by clinicians in muscular therapy; assessment, patient selection, and clinical judgment remain important."
+  - question: "What costs should a practice include in its revenue model?"
+    answer: "Consider applicable operational fees, staff time, training, space, marketing, supplies, payment processing, and the effect on existing services."
+  - question: "How can I learn about the Growth Partner Program?"
+    answer: "Contact the RX2600 team for current written program terms, eligibility, operational fees, training, and implementation information."
 related: [patient-acquisition-system, increase-revenue-with-rehabilitation-robotics]
 seo:
   title: "Increase Revenue with Robotic Therapy"
@@ -56,6 +60,13 @@ To explore whether robotic therapy might increase revenue, create a simple model
 
 Change the inputs to reflect your own situation. Model a lower-demand case, an expected case, and a higher-demand case. Consider how many appointments you can actually accommodate, what people in your market are willing to pay, how much time is required, and whether a session would replace another revenue-generating appointment.
 
+**Build your model around:**
+
+- Expected completed sessions, not just inquiries.
+- The price per session and the number of operating weeks.
+- Appointment availability, cancellations, and competing uses for the space.
+- Operational fees and all other costs that apply to your practice.
+
 Gross revenue is not profit. A decision should account for the operating fee and all other costs that apply to your practice. If you do not yet know a cost or a program term, label it as unknown and obtain current information before relying on your model.
 
 ## Include the costs behind the service
@@ -73,6 +84,13 @@ RX2600 describes its Growth Partner Program as a way for practices to add the ro
 Do not treat a placement offer as a promise of zero total costs. Your practice may still incur staff, space, marketing, or other expenses, and actual terms can vary. The right questions include what is included, when fees apply, who handles maintenance, what training is provided, and what happens if your practice's needs change.
 
 Once you understand the terms, add them to your model and compare them with your expected service capacity. [Contact the RX2600 team](https://rx2600.com/#contact) for a conversation about your practice and the current program.
+
+**Questions to bring to the conversation:**
+
+- What are the current eligibility criteria and operational fees?
+- What training and implementation support are included?
+- What responsibilities remain with the practice?
+- How would the service fit your clinical team and available space?
 
 ## Design a workflow your team can sustain
 
