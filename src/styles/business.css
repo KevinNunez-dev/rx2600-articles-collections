@@ -65,6 +65,7 @@
 .business-faq-list details[open] summary span::before { content: '−'; }
 .business-faq-list details p { margin: 0 25px 22px 0; color: #50636a; font-size: .9rem; }
 .business-conversion { background: radial-gradient(ellipse at 50% 100%, #124b54, transparent 65%), #071217; }
+.business-page .business-conversion h2 { margin-right: auto; margin-left: auto; }
 @media (max-width: 900px) {
   .business-wrap { padding: 80px 7%; }
   .business-product-copy { padding: 60px 8%; }
