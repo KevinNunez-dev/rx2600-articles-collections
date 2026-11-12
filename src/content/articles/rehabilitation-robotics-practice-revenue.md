@@ -7,7 +7,7 @@ categorySlug: "practice-growth"
 tags: [rehabilitation robotics, revenue, practice growth]
 bodySystems: []
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [robotic-therapy-practice-revenue, rx2600-for-physical-therapy-practice
 seo:
   title: "Rehabilitation Robotics and Practice Growth"
   description: "Consider demand, workflow, costs, and clinical fit when evaluating rehabilitation robotics."
-  noindex: true
+  noindex: false
 ---
 
 ## Start with the specific technology

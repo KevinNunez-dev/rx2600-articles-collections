@@ -7,7 +7,7 @@ categorySlug: "conditions-and-care"
 tags: [carpal tunnel treatment, carpal tunnel syndrome, wrist pain, hand numbness, RX2600, robotic therapy]
 bodySystems: [musculoskeletal, nervous system]
 contentType: "Condition guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -31,7 +31,7 @@ related: [sciatica-treatment-with-the-rx2600-therapeutic-robot, back-pain-treatm
 seo:
   title: "Carpal Tunnel Treatment with RX2600"
   description: "Understand carpal tunnel symptoms, care options, and questions about clinician-guided therapy with the RX2600."
-  noindex: true
+  noindex: false
 ---
 
 Carpal tunnel symptoms can make familiar activities feel different: typing may bring on tingling, gripping a steering wheel may cause discomfort, or nighttime numbness may interrupt sleep. If you are exploring carpal tunnel treatment with RX2600, the first step is understanding the condition and discussing your symptoms with a qualified clinician.

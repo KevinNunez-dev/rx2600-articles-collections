@@ -7,7 +7,7 @@ categorySlug: "for-business"
 tags: [business, practice growth, robotic therapy]
 bodySystems: []
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [rx2600-for-physical-therapy-practices, rx2600-for-chiropractors, robot
 seo:
   title: "RX2600 for Business: Robotic Therapy for Practices"
   description: "Explore considerations for introducing the RX2600 Therapeutic Robot to a clinical practice."
-  noindex: true
+  noindex: false
 ---
 
 ## A new service starts with your practice

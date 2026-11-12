@@ -7,7 +7,7 @@ categorySlug: "conditions-and-care"
 tags: [back pain treatment, lower back pain, muscular therapy, RX2600, robotic therapy]
 bodySystems: [musculoskeletal]
 contentType: "Condition guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -31,7 +31,7 @@ related: [sciatica-treatment-with-the-rx2600-therapeutic-robot, carpal-tunnel-tr
 seo:
   title: "Back Pain Treatment with the RX2600 Therapeutic Robot"
   description: "Learn about back pain care and questions to ask about RX2600 clinician-guided muscular therapy."
-  noindex: true
+  noindex: false
 ---
 
 Back pain can make everyday movement, work, exercise, and sleep more difficult. If you are considering back pain treatment with the RX2600 Therapeutic Robot, a useful first step is to understand your symptoms and discuss them with a qualified healthcare professional.

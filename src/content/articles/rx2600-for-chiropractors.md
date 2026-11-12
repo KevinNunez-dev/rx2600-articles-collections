@@ -7,7 +7,7 @@ categorySlug: "for-business"
 tags: [chiropractic, clinicians, robotic therapy]
 bodySystems: [musculoskeletal]
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [rx2600-for-business, robotic-therapy-practice-revenue]
 seo:
   title: "RX2600 for Chiropractic Practices"
   description: "Learn what chiropractic practices can consider when exploring the RX2600 Therapeutic Robot."
-  noindex: true
+  noindex: false
 ---
 
 ## Adding a tool, not replacing clinical judgment

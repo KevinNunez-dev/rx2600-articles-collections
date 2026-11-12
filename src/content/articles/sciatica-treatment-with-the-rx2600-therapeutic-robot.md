@@ -7,7 +7,7 @@ categorySlug: "conditions-and-care"
 tags: [sciatica treatment, sciatic nerve pain, leg pain, RX2600, robotic therapy]
 bodySystems: [musculoskeletal, nervous system]
 contentType: "Condition guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -31,7 +31,7 @@ related: [back-pain-treatment-with-the-rx2600-therapeutic-robot, carpal-tunnel-t
 seo:
   title: "Sciatica Treatment with the RX2600 Therapeutic Robot"
   description: "Learn about sciatica symptoms, treatment options, and questions to ask about RX2600 muscular therapy."
-  noindex: true
+  noindex: false
 ---
 
 Sciatica can affect the way you sit, walk, sleep, and move through the day. If you are researching sciatica treatment with the RX2600 Therapeutic Robot, it is important to understand what sciatica means, what needs medical attention, and how any proposed treatment fits your individual situation.

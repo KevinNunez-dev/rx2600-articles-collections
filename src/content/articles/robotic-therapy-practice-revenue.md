@@ -7,7 +7,7 @@ categorySlug: "practice-growth"
 tags: [revenue, practice growth, robotic therapy]
 bodySystems: []
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [rx2600-for-business, rehabilitation-robotics-practice-revenue]
 seo:
   title: "Exploring Practice Revenue with Robotic Therapy"
   description: "Review practical questions about demand, costs, pricing, and implementation before adding robotic therapy."
-  noindex: true
+  noindex: false
 ---
 
 ## Start with the numbers you know

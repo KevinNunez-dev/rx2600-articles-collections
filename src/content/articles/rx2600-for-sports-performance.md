@@ -7,7 +7,7 @@ categorySlug: "sports-performance"
 tags: [sports, movement, muscular therapy]
 bodySystems: [musculoskeletal]
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [rx2600-for-physical-therapy-practices, rx2600-for-business]
 seo:
   title: "RX2600 and Sports Performance"
   description: "Explore clinician-guided muscular therapy and considerations for active people."
-  noindex: true
+  noindex: false
 ---
 
 ## Supporting active lives

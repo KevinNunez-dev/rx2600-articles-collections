@@ -7,7 +7,7 @@ categorySlug: "for-business"
 tags: [physical therapy, clinicians, robotic therapy]
 bodySystems: [musculoskeletal]
 contentType: "guide"
-draft: true
+draft: false
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
@@ -22,7 +22,7 @@ related: [rx2600-for-business, rehabilitation-robotics-practice-revenue]
 seo:
   title: "RX2600 for Physical Therapy Practices"
   description: "Explore considerations for physical therapy practices interested in the RX2600 Therapeutic Robot."
-  noindex: true
+  noindex: false
 ---
 
 ## A tool within a larger plan

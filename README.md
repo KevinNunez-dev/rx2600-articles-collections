@@ -28,7 +28,7 @@ The library home is available at `/therapy/`.
 
 Article URLs use `/therapy/<filename>/`. The frontmatter schema in `src/content.config.ts` validates metadata at build time. Drafts can be previewed at their direct URLs while running `npm run dev`, but are excluded from the production build and sitemap.
 
-The initial business, physical therapy, chiropractic, sports performance, and practice-revenue articles are unpublished editorial drafts. Their copy, clinical statements, business guidance, and images require review and approval before publication.
+The condition, business, physical therapy, chiropractic, sports performance, and practice-revenue articles are configured for publication. Their copy, clinical statements, business guidance, and images require review and approval before deployment. The example article remains an unpublished template.
 
 The three practice-growth articles are configured for production at their own `/therapy/<slug>/` URLs. Review their copy, claims, and media before deployment; `draft: false` and `seo.noindex: false` make them public and eligible for indexing, not automatically indexed by search engines.
 
