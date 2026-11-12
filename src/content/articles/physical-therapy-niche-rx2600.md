@@ -12,7 +12,7 @@ publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 author: "RX2600 Editorial Team"
 readingTime: 7
-image: "/therapy/media/rx2600-clinicians.jpg"
+image: "/therapy/media/Robots-and-2-therapists-scaled.jpg"
 imageAlt: "Clinicians working with RX2600 Therapeutic Robot systems"
 keyTakeaways:
   - "Choose a community and service based on real patient needs and clinician qualifications."

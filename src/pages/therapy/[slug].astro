@@ -5,6 +5,7 @@ import JsonLd from '../../components/JsonLd.astro';
 import ArticleList from '../../components/ArticleList.astro';
 import PracticeLanding from '../../components/PracticeLanding.astro';
 import Icon from '../../components/Icon.astro';
+import AnatomyViewer from '../../components/AnatomyViewer.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) =>
@@ -93,6 +94,7 @@ const articleSchema = {
             <p class="article-sidebar-label">ON THIS PAGE</p>
             <ol>
               {sections.map((section) => <li><a href={`#${section.slug}`}>{section.text}</a></li>)}
+              {article.data.anatomyModel && <li><a href="#anatomy-viewer">Explore the anatomy</a></li>}
               {article.data.faq.length > 0 && <li><a href="#article-faq">Frequently asked questions</a></li>}
             </ol>
           </nav>
@@ -106,6 +108,7 @@ const articleSchema = {
         <div class="prose article-prose">
         <Content />
         </div>
+        {article.data.anatomyModel === 'pelvic-sacral-plexus' && <AnatomyViewer />}
         {article.data.faq.length > 0 && (
           <section class="article-faq" id="article-faq">
             <p class="marketing-kicker">GOOD TO KNOW</p>

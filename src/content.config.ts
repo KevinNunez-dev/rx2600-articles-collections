@@ -26,6 +26,7 @@ const articles = defineCollection({
       answer: z.string(),
     })).default([]),
     related: z.array(z.string()).optional(),
+    anatomyModel: z.enum(['pelvic-sacral-plexus']).optional(),
     landing: z.object({
       eyebrow: z.string(),
       heroLead: z.string(),

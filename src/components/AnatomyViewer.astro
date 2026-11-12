@@ -1,0 +1,59 @@
+<section class="anatomy-viewer" id="anatomy-viewer" aria-labelledby="anatomy-title">
+  <p class="anatomy-kicker">INTERACTIVE ANATOMY</p>
+  <h2 id="anatomy-title">A closer look at the pelvis.</h2>
+  <p>Explore the deep hip muscles and sacral plexus, a network of nerves in the pelvis. Rotate and zoom the model to see how these structures relate to one another.</p>
+  <p>This model is educational. It cannot determine the cause of sciatica or establish that the RX2600 treats sciatica or decompresses a nerve.</p>
+  <div class="anatomy-stage" data-anatomy-stage>
+    <div class="anatomy-prompt" data-anatomy-prompt>
+      <span class="anatomy-mark" aria-hidden="true">3D</span>
+      <p>Explore the anatomy at your own pace.</p>
+      <button type="button" class="anatomy-button" data-anatomy-load hidden>Load interactive model</button>
+      <small>Loading connects to Sketchfab, which may receive your IP address and use cookies or similar technologies.</small>
+    </div>
+  </div>
+  <p class="anatomy-credit">
+    <a href="https://sketchfab.com/3d-models/deep-muscles-of-the-pelvis-and-sacral-plexus-be6b3bfa96504111b79e5f37ccc27935" target="_blank" rel="noopener noreferrer">Deep muscles of the pelvis and Sacral plexus</a>
+    by <a href="https://sketchfab.com/Q.art" target="_blank" rel="noopener noreferrer">Q.art</a> on
+    <a href="https://sketchfab.com" target="_blank" rel="noopener noreferrer">Sketchfab</a>.
+    If the viewer doesn't load, open the model using the link above.
+  </p>
+</section>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-anatomy-load]');
+  if (button) button.hidden = false;
+  button?.addEventListener('click', () => {
+    const stage = button.closest<HTMLElement>('[data-anatomy-stage]');
+    const prompt = stage?.querySelector<HTMLElement>('[data-anatomy-prompt]');
+    if (!stage || !prompt) return;
+
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Interactive 3D model of the deep muscles of the pelvis and sacral plexus';
+    iframe.src = 'https://sketchfab.com/models/be6b3bfa96504111b79e5f37ccc27935/embed';
+    iframe.allow = 'fullscreen; xr-spatial-tracking';
+    iframe.allowFullscreen = true;
+    stage.replaceChild(iframe, prompt);
+  });
+</script>
+
+<style>
+  .anatomy-viewer { margin-top: 80px; padding: clamp(24px, 4vw, 36px); border: 1px solid #dce6e8; border-radius: 12px; background: #fff; scroll-margin-top: 110px; }
+  .anatomy-kicker { margin: 0 0 16px; color: #087c89; font-size: .68rem; font-weight: 700; letter-spacing: .16em; }
+  h2 { margin: 0 0 18px; color: #111820; font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.045em; line-height: 1.12; }
+  .anatomy-viewer > p:not(.anatomy-kicker) { color: #52636a; line-height: 1.7; }
+  .anatomy-stage { display: grid; min-height: 360px; margin-top: 24px; overflow: hidden; border-radius: 10px; background: radial-gradient(circle at 50% 25%, #1b424a, #101d24 72%); }
+  .anatomy-prompt { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 32px 24px; color: #e7f2f1; text-align: center; }
+  .anatomy-prompt p { margin: 0; font-size: 1.05rem; }
+  .anatomy-mark { display: grid; width: 68px; height: 68px; place-items: center; border: 1px solid #5cc6ce; border-radius: 50%; color: #71d5dd; font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; }
+  .anatomy-button { padding: 13px 20px; border: 0; border-radius: 6px; background: #0fb4c6; color: #071519; cursor: pointer; font: inherit; font-weight: 700; }
+  .anatomy-button:hover { background: #61d6df; }
+  .anatomy-button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  small { max-width: 390px; color: #bdcdd0; font-size: .78rem; line-height: 1.5; }
+  .anatomy-stage :global(iframe) { display: block; width: 100%; height: 460px; border: 0; }
+  .anatomy-viewer .anatomy-credit { margin: 15px 0 0; font-size: .79rem; }
+  .anatomy-credit a { color: #087c89; text-decoration: underline; }
+  @media (max-width: 600px) {
+    .anatomy-stage { min-height: 320px; }
+    .anatomy-stage :global(iframe) { height: 350px; }
+  }
+</style>

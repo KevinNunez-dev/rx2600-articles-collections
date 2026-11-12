@@ -40,6 +40,8 @@ The business landing page is `/therapy/business/`. Its program terms, cost infor
 
 Article pages render key takeaways as cards, Markdown level-two headings as an on-page contents menu, FAQ entries as expandable questions, and published entries listed in `related` as linked cards. Use Markdown lists to make practical steps scannable; draft and noindex articles do not appear in related cards.
 
+The sciatica article uses `anatomyModel: pelvic-sacral-plexus` to display an optional, visitor-activated Sketchfab embed, not a locally hosted Three.js asset. The model is [Deep muscles of the pelvis and Sacral plexus](https://sketchfab.com/3d-models/deep-muscles-of-the-pelvis-and-sacral-plexus-be6b3bfa96504111b79e5f37ccc27935) by [Q.art](https://sketchfab.com/Q.art). The site owner confirmed permission for commercial website embedding; retain the written permission and verify any additional attribution or usage conditions before deployment. No public reuse license was listed in the model metadata. Sketchfab receives a request only after the visitor chooses to load the model. Review the anatomical and clinical context before publishing.
+
 Audience-specific marketing pages can use the optional `landing` frontmatter fields to render a shorter practice-landing template. Their revenue scenario is illustrative gross revenue, not profit or a forecast; verify program terms and all product or clinical claims before publishing. The decorative Three.js animation is not a representation of the robot and falls back to static artwork when reduced motion is requested or WebGL is unavailable.
 
 The site-wide guided assistant in `src/components/GuidedAssistant.astro` provides prewritten answers and links; it is not live or AI chat and collects no visitor information. Update its answers when approved product or program terms change, and review clinical and financial wording before publication. Its topic disclosures work without JavaScript.
@@ -70,8 +72,9 @@ The starter uses selected assets from the public RX2600 WordPress media library:
 - `public/therapy/media/rx2600-robot.png`: [RX2600 treatment head](https://rx2600.com/wp-content/uploads/2024/04/robot-up-close-transparent.png), media ID 2720.
 - `public/therapy/media/rx2600-showcase.jpg`: [RX2600 in a clinical setting](https://rx2600.com/wp-content/uploads/2025/02/rpt-robot-showcase-scaled.jpg), media ID 3385.
 - `public/therapy/media/rx2600-logo-white.png`: [RX2600 logo](https://rx2600.com/wp-content/uploads/2025/02/RX2600-logo-in-white-1024x401.png), media ID 3392 (1024px variant).
-- `public/therapy/media/rx2600-clinicians.jpg`: [clinicians and RX2600 systems](https://rx2600.com/wp-content/uploads/2025/02/Robots-and-2-therapists-1024x683.jpg), media ID 3182 (1024px variant).
+- `public/therapy/media/Robots-and-2-therapists-scaled.jpg`: higher-resolution clinicians and RX2600 systems image supplied by the site owner, replacing the former 1024px variant.
 - `public/therapy/media/rpt-treatment.jpg`: [clinician using RX2600](https://rptclinic.com/wp-content/uploads/2025/12/rpt-process-3-scaled.jpg), from the RPT Clinic WordPress media library.
+- `public/therapy/media/RPT-OfficePortraits-12-updated.jpg` and `public/therapy/media/6Ben-with-client-full-robot-and-logo-scaled.jpg`: additional treatment photos supplied by the site owner.
 
 Confirm the right to reuse each image and any depicted individuals' permissions before publishing. The media files are local to the build; the REST API is not needed at runtime. Existing WordPress pages are references only and are not imported as articles.
 

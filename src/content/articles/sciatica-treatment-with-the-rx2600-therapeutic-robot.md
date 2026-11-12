@@ -28,6 +28,7 @@ faq:
   - question: "Is robotic therapy a replacement for an assessment?"
     answer: "No. A qualified clinician should assess symptoms and advise on appropriate treatment and further evaluation."
 related: [back-pain-treatment-with-the-rx2600-therapeutic-robot, carpal-tunnel-treatment-with-rx2600]
+anatomyModel: pelvic-sacral-plexus
 seo:
   title: "Sciatica Treatment with the RX2600 Therapeutic Robot"
   description: "Learn about sciatica symptoms, treatment options, and questions to ask about RX2600 muscular therapy."
