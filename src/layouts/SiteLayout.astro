@@ -78,11 +78,43 @@ const websiteSchema = {
       <slot />
     </main>
     <footer class="site-footer">
-      <a class="wordmark footer-wordmark" href="/therapy/">
-        <img src="/therapy/media/rx2600-logo-white.png" alt="RX2600 Therapy home" width="1024" height="401" />
-      </a>
-      <p>Robotic therapy. Human expertise. New possibilities.</p>
-      <a class="footer-note" href="https://rx2600.com/#contact">Connect with the RX2600 team <Icon /></a>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="wordmark footer-wordmark" href="/therapy/">
+            <img src="/therapy/media/rx2600-logo-white.png" alt="RX2600 Therapy home" width="1024" height="401" />
+          </a>
+          <p>Robotic therapy. Human expertise.<br />Built for your practice.</p>
+          <a class="footer-contact" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
+        </div>
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <div class="footer-column">
+            <h2>Discover</h2>
+            <a href="/therapy/#why-rx2600">Why RX2600</a>
+            <a href="/therapy/#approach">Our technology</a>
+            <a href="/therapy/#partnership">Growth Partner Program</a>
+            <a href="https://rx2600.com/">RX2600 website <Icon /></a>
+          </div>
+          <div class="footer-column">
+            <h2>For your practice</h2>
+            <a href="/therapy/robotic-massage-for-physical-therapists/">Physical therapy</a>
+            <a href="/therapy/robotic-massage-for-chiropractors/">Chiropractic</a>
+            <a href="/therapy/robotic-massage-for-sports-performance/">Sports performance</a>
+            <a href="/therapy/#who-its-for">Wellness spaces</a>
+          </div>
+          <div class="footer-column">
+            <h2>Explore</h2>
+            <a href="/therapy/articles/">Article library</a>
+            <a href="/therapy/patient-acquisition-system/">Patient acquisition</a>
+            <a href="/therapy/increase-revenue-with-robotic-therapy/">Robotic therapy revenue</a>
+            <a href="/therapy/increase-revenue-with-rehabilitation-robotics/">Rehabilitation robotics</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; {new Date().getFullYear()} RX2600</span>
+        <span>Robotic therapy, powered by human expertise.</span>
+        <a href="/therapy/">Back to the library home <Icon /></a>
+      </div>
     </footer>
   </body>
 </html>
