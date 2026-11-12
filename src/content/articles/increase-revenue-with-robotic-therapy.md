@@ -1,6 +1,6 @@
 ---
 title: "Increase Revenue with Robotic Therapy"
-description: "Explore how to evaluate robotic therapy as a potential revenue opportunity for your clinical or wellness practice."
+description: "Discover how to build a robotic therapy service and plan revenue for your clinical or wellness practice."
 excerpt: "Assess demand, pricing, operational costs, and clinical fit before adding robotic therapy to your practice."
 category: "Practice Growth"
 categorySlug: "practice-growth"
@@ -34,7 +34,7 @@ seo:
   noindex: false
 ---
 
-Practice owners looking to increase revenue with robotic therapy are often asking a broader question: how can we introduce a service that is valuable to the people we serve and sustainable for our team? A new technology may help a practice differentiate its offering, create another way to serve appropriate patients, and explore a potential cash-pay revenue stream. None of those outcomes is automatic. The business case depends on clinical fit, local demand, pricing, capacity, costs, and execution.
+Practice owners looking to increase revenue with robotic therapy can introduce a distinctive service that combines technology with clinician expertise. A cash-pay offering creates a new revenue stream to plan around your practice's goals. Actual results depend on clinical fit, local demand, pricing, capacity, costs, and execution.
 
 The RX2600 Therapeutic Robot is a clinician-used tool for muscular therapy and soft tissue care. For physical therapy, chiropractic, sports performance, and other suitable settings, evaluating it begins with the needs of the practice and the people it serves. This guide offers a framework for thinking through the opportunity before making a commitment.
 
@@ -79,7 +79,7 @@ Review the model with your accountant or financial adviser. The right comparison
 
 ## Explore the RX2600 Growth Partner Program
 
-RX2600 describes its Growth Partner Program as a way for practices to add the robot without purchasing it, with a flat-rate operational fee. Ask the RX2600 team for current written terms, eligibility requirements, training information, and any other responsibilities before deciding whether the program fits your organization.
+RX2600 describes its Growth Partner Program as a way for practices to add the robot without purchasing it, with a flat-rate operational fee. Ask the RX2600 team for current written terms, eligibility requirements, training information, and your practice's responsibilities.
 
 Do not treat a placement offer as a promise of zero total costs. Your practice may still incur staff, space, marketing, or other expenses, and actual terms can vary. The right questions include what is included, when fees apply, who handles maintenance, what training is provided, and what happens if your practice's needs change.
 

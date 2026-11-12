@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import JsonLd from '../components/JsonLd.astro';
+import Icon from '../components/Icon.astro';
 
 interface Props {
   title: string;
@@ -54,9 +55,9 @@ const websiteSchema = {
         <form class="header-search" action="/therapy/articles/" method="get" role="search">
           <label class="sr-only" for="header-query">Search articles</label>
           <input id="header-query" name="q" type="search" placeholder="Search articles" />
-          <button type="submit" aria-label="Search articles">↗</button>
+          <button type="submit" aria-label="Search articles"><Icon /></button>
         </form>
-        <a class="nav-cta" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
       </nav>
       <details class="mobile-menu">
         <summary>Menu</summary>
@@ -65,7 +66,7 @@ const websiteSchema = {
           <a href="/therapy/#who-its-for">Who it's for</a>
           <a href="/therapy/#partnership">For business</a>
           <a href="/therapy/articles/">Insights</a>
-          <a href="https://rx2600.com/#contact">Talk to our team ↗</a>
+          <a href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
           <form class="mobile-search" action="/therapy/articles/" method="get" role="search">
             <label for="mobile-query">Search articles</label>
             <div><input id="mobile-query" name="q" type="search" placeholder="Search articles" /><button type="submit">Search</button></div>
@@ -81,7 +82,7 @@ const websiteSchema = {
         <img src="/therapy/media/rx2600-logo-white.png" alt="RX2600 Therapy home" width="1024" height="401" />
       </a>
       <p>Robotic therapy. Human expertise. New possibilities.</p>
-      <a class="footer-note" href="https://rx2600.com/#contact">Connect with the RX2600 team ↗</a>
+      <a class="footer-note" href="https://rx2600.com/#contact">Connect with the RX2600 team <Icon /></a>
     </footer>
   </body>
 </html>

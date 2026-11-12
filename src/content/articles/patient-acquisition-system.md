@@ -110,4 +110,4 @@ Review the journey at regular intervals. If many people visit a page but few con
 
 Document who owns each step, how inquiries are routed, and when your team reviews results. Assign a realistic budget and make changes one at a time when possible. A dependable process that the practice can sustain is more useful than a complex campaign that is difficult to manage.
 
-As your patient acquisition system develops, revisit the quality of the patient experience alongside the numbers. Clear expectations, respectful communication, appropriate services, and consistent follow-through are the foundation for lasting trust. To discuss the RX2600 and whether it could fit your practice's goals, [connect with our team](https://rx2600.com/#contact).
+As your patient acquisition system develops, revisit the quality of the patient experience alongside the numbers. Clear expectations, respectful communication, appropriate services, and consistent follow-through are the foundation for lasting trust. To bring RX2600 to your practice, [connect with our team](https://rx2600.com/#contact).

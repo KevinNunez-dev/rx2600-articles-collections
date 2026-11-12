@@ -4,6 +4,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import ArticleList from '../../components/ArticleList.astro';
 import PracticeLanding from '../../components/PracticeLanding.astro';
+import Icon from '../../components/Icon.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) =>
@@ -53,7 +54,7 @@ const articleSchema = {
   <article class="article-page">
     <header class:list={['article-hero', { 'article-hero-no-image': !article.data.image }]}>
       <div class="article-hero-copy">
-        <a class="article-back" href="/therapy/articles/">← Back to insights</a>
+        <a class="article-back" href="/therapy/articles/"><Icon name="arrow-left" /> Back to insights</a>
         <p class="article-category">{article.data.category} <span aria-hidden="true">/</span> {article.data.contentType}</p>
         <h1>{article.data.title}</h1>
         <p class="article-deck">{article.data.description}</p>
@@ -97,7 +98,7 @@ const articleSchema = {
           </nav>
           <div class="article-sidebar-cta">
             <p>Make your next move.</p>
-            <a href="https://rx2600.com/#contact">Talk to our team ↗</a>
+            <a href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
           </div>
         </aside>
       )}
@@ -131,16 +132,16 @@ const articleSchema = {
     <section class="library-section related-section">
       <div class="section-heading">
         <div><p class="marketing-kicker">KEEP EXPLORING</p><h2>More ideas for your practice.</h2></div>
-        <a class="archive-link" href="/therapy/articles/">View all articles ↗</a>
+        <a class="archive-link" href="/therapy/articles/">View all articles <Icon /></a>
       </div>
       <ArticleList articles={relatedArticles} />
     </section>
   )}
   <section class="conversion-section">
     <p class="marketing-kicker">EXPLORE THE RX2600</p>
-    <h2>See what robotic therapy could bring to your practice.</h2>
-    <p>Connect with our team to discuss your goals and explore the right fit.</p>
-    <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
+    <h2>Bring robotic therapy to your practice.</h2>
+    <p>Connect with our team to discuss your goals and the RX2600 program.</p>
+    <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
   </section>
   </>
   )}

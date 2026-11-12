@@ -1,6 +1,6 @@
 ---
 title: "Robotic Massage for Physical Therapists"
-description: "Explore how the RX2600 Therapeutic Robot could complement a physical therapy practice and create a potential new service opportunity."
+description: "Bring clinician-guided robotic muscular therapy and a distinctive new service to your physical therapy practice with the RX2600."
 excerpt: "Pair clinician expertise with robotic muscular therapy and explore a new path for practice growth."
 category: "For Physical Therapists"
 categorySlug: "physical-therapy"
@@ -22,11 +22,11 @@ landing:
   audienceIntro: "The RX2600 is a clinician-used tool designed to bring robotic precision to muscular therapy and soft tissue care."
   benefits:
     - title: "Complement your care"
-      description: "Explore a muscular therapy tool alongside assessment, movement, and your existing treatment plans."
+      description: "Bring a muscular therapy tool alongside assessment, movement, and your existing treatment plans."
     - title: "Differentiate the experience"
       description: "Introduce a distinctive, technology-forward service to people looking for care."
-    - title: "Explore a revenue stream"
-      description: "Consider a potential cash-pay offering with a business model built for practice growth."
+    - title: "Build a revenue stream"
+      description: "Develop a cash-pay offering with a business model built for practice growth."
   fitTitle: "Built to work alongside your expertise."
   fitText: "The RX2600 supports clinician-guided muscular therapy. Your team determines how the system fits each patient's assessment and individual plan."
   fitPoints:
@@ -45,8 +45,8 @@ faq:
 related: [robotic-massage-for-chiropractors, robotic-massage-for-sports-performance]
 seo:
   title: "Robotic Massage for Physical Therapists"
-  description: "Explore RX2600 robotic muscular therapy for physical therapists, program costs, and potential practice revenue."
+  description: "Discover RX2600 robotic muscular therapy for physical therapists, program costs, and practice revenue planning."
   noindex: false
 ---
 
-Explore clinician-guided muscular therapy and a potential practice-growth opportunity with the RX2600 Therapeutic Robot.
+Bring clinician-guided muscular therapy and a new service to your practice with the RX2600 Therapeutic Robot.

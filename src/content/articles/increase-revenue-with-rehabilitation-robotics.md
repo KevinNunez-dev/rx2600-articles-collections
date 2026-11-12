@@ -34,7 +34,7 @@ seo:
   noindex: false
 ---
 
-Rehabilitation robotics can offer practices a new way to think about the services they provide. For an owner considering whether to increase revenue with rehabilitation robotics, the question is not simply whether a technology looks impressive. It is whether a specific system fits the practice's clinical work, the people it serves, and a realistic operating model.
+Rehabilitation robotics gives practices a new way to bring technology and clinical expertise together. Build a distinctive service around the people you serve, your clinical work, and an operating model grounded in your practice's numbers.
 
 Different rehabilitation robots serve different purposes. Some are designed for movement assistance, while others have different clinical applications. The RX2600 Therapeutic Robot is a tool clinicians use for muscular therapy and soft tissue care. Its intended use and requirements should be evaluated on their own terms rather than assumed to match another device.
 

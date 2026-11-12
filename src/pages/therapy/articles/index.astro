@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArticleList from '../../../components/ArticleList.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+import Icon from '../../../components/Icon.astro';
 
 const articles = (await getCollection('articles'))
   .filter(({ data }) => !data.draft && !data.seo.noindex)
@@ -35,8 +36,8 @@ const articles = (await getCollection('articles'))
   <section class="conversion-section">
     <p class="marketing-kicker">LET'S BUILD WHAT'S NEXT</p>
     <h2>Ready to explore the possibilities?</h2>
-    <p>Tell us about your practice and discover whether the RX2600 is the right fit.</p>
-    <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
+    <p>Bring RX2600 robotic therapy to your practice. Our team is ready to help you get started.</p>
+    <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
   </section>
 </SiteLayout>
 

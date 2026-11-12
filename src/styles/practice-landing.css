@@ -36,7 +36,7 @@
 .practice-fit-copy { align-self: center; max-width: 720px; padding: 80px 12%; }
 .practice-fit-copy ul { display: grid; gap: 14px; margin: 28px 0; padding: 0; list-style: none; }
 .practice-fit-copy li { display: flex; gap: 12px; align-items: start; font-size: .9rem; line-height: 1.5; }
-.practice-fit-copy li span { color: #087f8b; font-weight: 700; }
+.practice-fit-copy li .icon { color: #087f8b; margin-top: .2em; }
 .practice-text-link { color: #087c89; font-size: .85rem; font-weight: 700; }
 .practice-text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .practice-economics { padding: 110px max(7vw, calc((100vw - 1320px) / 2)); background: #0a171c; color: #fff; }
@@ -57,7 +57,7 @@
 .economics-costs h3 { margin: 25px 0; font-size: 1.8rem; letter-spacing: -.04em; }
 .economics-costs ul { display: grid; gap: 19px; margin: 0 0 25px; padding: 0; list-style: none; }
 .economics-costs li { display: flex; gap: 14px; }
-.economics-costs li > span { color: #61d6df; }
+.economics-costs li > .icon { color: #61d6df; margin-top: .2em; }
 .economics-costs li strong { font-size: .92rem; }
 .economics-costs li p { margin: 5px 0 0; color: #bccdd0; font-size: .82rem; line-height: 1.55; }
 .economics-costs .practice-text-link { color: #6de0e8; }

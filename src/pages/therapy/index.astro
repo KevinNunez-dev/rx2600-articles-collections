@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ArticleList from '../../components/ArticleList.astro';
+import Icon from '../../components/Icon.astro';
 
 const articles = (await getCollection('articles'))
   .filter(({ data }) => !data.draft && !data.seo.noindex)
@@ -10,13 +11,13 @@ const inquiryUrl = 'https://rx2600.com/#contact';
 const audiences = [
   {
     name: 'Physical therapy',
-    description: 'Explore a robotic tool that can complement clinician-led physical therapy and soft tissue care.',
+    description: 'Bring a robotic tool to clinician-led physical therapy and soft tissue care.',
     href: '/therapy/robotic-massage-for-physical-therapists/',
     image: '/therapy/media/rx2600-clinicians.jpg',
   },
   {
     name: 'Chiropractic',
-    description: 'Consider how targeted muscular therapy could fit alongside your existing approach to care.',
+    description: 'Add targeted muscular therapy to your clinician-guided approach to care.',
     href: '/therapy/robotic-massage-for-chiropractors/',
     image: '/therapy/media/rpt-treatment.jpg',
   },
@@ -28,7 +29,7 @@ const audiences = [
   },
   {
     name: 'Wellness spaces',
-    description: 'Explore whether the RX2600 is a fit for your team, your services, and your clients.',
+    description: 'Bring clinician-guided robotic muscular therapy to your team, services, and clients.',
     href: inquiryUrl,
     image: '/therapy/media/rx2600-robot.png',
   },
@@ -47,10 +48,10 @@ const audiences = [
     <div class="marketing-hero-content">
       <p class="marketing-kicker">THE RX2600 THERAPEUTIC ROBOT</p>
       <h1 id="hero-heading">A smarter way to<br />grow your practice.</h1>
-      <p>Bring clinician-guided robotic therapy to your practice—and explore a new opportunity to expand your services and revenue.</p>
+      <p>Bring clinician-guided robotic therapy to your practice—and open a new avenue for services and revenue.</p>
       <div class="button-group">
-        <a class="button button-accent" href={inquiryUrl}>Talk to our team <span aria-hidden="true">↗</span></a>
-        <a class="button button-outline" href="#why-rx2600">Explore the RX2600 <span aria-hidden="true">↓</span></a>
+        <a class="button button-accent" href={inquiryUrl}>Talk to our team <Icon /></a>
+        <a class="button button-outline" href="#why-rx2600">Explore the RX2600 <Icon name="arrow-down" /></a>
       </div>
     </div>
     <span class="hero-photo-caption">ROBOTS + CLINICIANS. BUILT AROUND YOUR PRACTICE.</span>
@@ -58,7 +59,7 @@ const audiences = [
 
   <section class="business-strip">
     <div><span>THE GROWTH PARTNER PROGRAM</span><p>A new service. A new possibility for your business.</p></div>
-    <a class="button button-dark" href="#partnership">Explore the program <span aria-hidden="true">↗</span></a>
+    <a class="button button-dark" href="#partnership">Explore the program <Icon /></a>
   </section>
 
   <section class="benefits-section" id="why-rx2600">
@@ -77,8 +78,8 @@ const audiences = [
       <article class="benefit-card">
         <div class="benefit-image"><img src="/therapy/media/rx2600-clinicians.jpg" alt="Clinicians working with RX2600 systems" loading="lazy" /></div>
         <span class="card-number">02 / PRACTICE CAPACITY</span>
-        <h3>Explore more capacity</h3>
-        <p>Consider how robotic therapy can fit your team's workflow and support the way you deliver care.</p>
+        <h3>Enhance your workflow</h3>
+        <p>Integrate robotic therapy into your team's workflow and support the way you deliver care.</p>
       </article>
       <article class="benefit-card">
         <div class="benefit-image image-product"><img src="/therapy/media/rx2600-robot.png" alt="Close-up of the RX2600 treatment head" loading="lazy" /></div>
@@ -90,7 +91,7 @@ const audiences = [
         <div class="benefit-image"><img src="/therapy/media/rx2600-showcase.jpg" alt="A clinician using the RX2600 with a patient" loading="lazy" /></div>
         <span class="card-number">04 / BUSINESS GROWTH</span>
         <h3>Open a new revenue path</h3>
-        <p>Explore a potential cash-pay service and a business model designed for practice growth.</p>
+        <p>Introduce a cash-pay service with a business model designed for practice growth.</p>
       </article>
     </div>
   </section>
@@ -103,7 +104,7 @@ const audiences = [
       <p class="marketing-kicker">PRECISION MEETS PRACTICE</p>
       <h2>Technology that works alongside your expertise.</h2>
       <p>The RX2600 Therapeutic Robot is a tool used by clinicians to assist with muscular therapy and soft tissue mobilization. Your clinical judgment remains at the center of care.</p>
-      <a class="button button-dark" href="https://rx2600.com/">Meet the RX2600 <span aria-hidden="true">↗</span></a>
+      <a class="button button-dark" href="https://rx2600.com/">Meet the RX2600 <Icon /></a>
     </div>
   </section>
 
@@ -111,7 +112,7 @@ const audiences = [
     <div class="marketing-section-heading">
       <p class="marketing-kicker">DESIGNED FOR YOUR SPACE</p>
       <h2>Different practices. Shared ambition.</h2>
-      <p>Wherever you work, find out how robotic therapy could fit your vision.</p>
+      <p>Bring robotic muscular therapy to the people and communities you serve.</p>
     </div>
     <div class="audience-grid">
       {audiences.map((audience) => (
@@ -120,7 +121,7 @@ const audiences = [
           <div class="audience-card-copy">
             <h3>{audience.name}</h3>
             <p>{audience.description}</p>
-            <span>Explore <span aria-hidden="true">↗</span></span>
+            <span>Explore <Icon /></span>
           </div>
         </a>
       ))}
@@ -132,27 +133,41 @@ const audiences = [
       <p class="marketing-kicker">THE GROWTH PARTNER PROGRAM</p>
       <h2>A partnership built around growth.</h2>
       <p>Our current program is designed to help practices add RX2600 therapy without purchasing the robot. Talk with our team about eligibility, operational fees, and the details for your practice.</p>
-      <a class="button button-accent" href={inquiryUrl}>Discuss your practice <span aria-hidden="true">↗</span></a>
+      <a class="button button-accent" href={inquiryUrl}>Discuss your practice <Icon /></a>
     </div>
     <div class="partnership-steps">
       <div><span>01</span><div><h3>Tell us about your practice</h3><p>Share your goals, services, and what you are looking to add.</p></div></div>
-      <div><span>02</span><div><h3>Explore the fit</h3><p>Discuss the system, your setting, and the current program terms with our team.</p></div></div>
-      <div><span>03</span><div><h3>Plan the next step</h3><p>Learn about training and implementation if your practice moves forward.</p></div></div>
+      <div><span>02</span><div><h3>Discover the program</h3><p>Discuss the system, your setting, and the current program terms with our team.</p></div></div>
+      <div><span>03</span><div><h3>Plan the next step</h3><p>Learn about training and implementation for your practice.</p></div></div>
     </div>
     <p class="program-note">Program availability, eligibility, and terms may vary. A flat-rate operational fee applies. Revenue and results are not guaranteed.</p>
   </section>
 
-  <section class="library-section" id="library">
+  <section class="library-section home-library" id="library" aria-labelledby="home-library-title">
     <div class="section-heading">
       <div>
         <p class="marketing-kicker">THE RX2600 JOURNAL</p>
-        <h2>Ideas for your next chapter.</h2>
-        <a class="archive-link" href="/therapy/articles/">Browse all articles <span aria-hidden="true">↗</span></a>
+        <h2 id="home-library-title">Ideas for your next chapter.</h2>
+        <a class="archive-link" href="/therapy/articles/">Browse all articles <Icon /></a>
       </div>
       <p class="library-count">{articles.length.toString().padStart(2, '0')} ARTICLES</p>
     </div>
     {articles.length > 0 ? (
-      <ArticleList articles={articles.slice(0, 3)} />
+      <>
+        <div class="journal-module-heading">
+          <div><p class="journal-label">EDITOR'S DESK</p><h3>Featured stories.</h3></div>
+          <p>Insights, ideas, and technology for ambitious practices.</p>
+        </div>
+        <ArticleList articles={articles.slice(0, 5)} variant="featured" />
+        <div class="journal-module-heading journal-rail-heading">
+          <div><p class="journal-label">THE RX2600 COLLECTION</p><h3>Browse the latest.</h3></div>
+          <div class="journal-controls" data-journal-controls hidden>
+            <button type="button" data-journal-prev aria-label="Previous articles" aria-controls="journal-rail"><Icon name="arrow-left" /></button>
+            <button type="button" data-journal-next aria-label="Next articles" aria-controls="journal-rail"><Icon name="arrow-right" /></button>
+          </div>
+        </div>
+        <ArticleList articles={articles} variant="rail" />
+      </>
     ) : (
       <div class="empty-state">
         <span class="empty-state-index">COMING SOON</span>
@@ -165,7 +180,37 @@ const audiences = [
   <section class="conversion-section">
     <p class="marketing-kicker">LET'S BUILD WHAT'S NEXT</p>
     <h2>Ready to explore the possibilities?</h2>
-    <p>Tell us about your practice and discover whether the RX2600 is the right fit.</p>
-    <a class="button button-accent" href={inquiryUrl}>Talk to our team <span aria-hidden="true">↗</span></a>
+    <p>Bring RX2600 robotic therapy to your practice. Our team is ready to help you get started.</p>
+    <a class="button button-accent" href={inquiryUrl}>Talk to our team <Icon /></a>
   </section>
 </SiteLayout>
+
+<script>
+  const rail = document.querySelector<HTMLElement>('#journal-rail');
+  const controls = document.querySelector<HTMLElement>('[data-journal-controls]');
+  const previous = document.querySelector<HTMLButtonElement>('[data-journal-prev]');
+  const next = document.querySelector<HTMLButtonElement>('[data-journal-next]');
+
+  if (rail && controls && previous && next) {
+    const updateControls = () => {
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+      controls.hidden = maxScroll <= 1;
+      previous.disabled = rail.scrollLeft <= 1;
+      next.disabled = rail.scrollLeft >= maxScroll - 1;
+    };
+    const scrollRail = (direction: number) => {
+      const card = rail.querySelector<HTMLElement>('.article-card');
+      if (!card) return;
+      const gap = Number.parseFloat(getComputedStyle(rail).columnGap) || 0;
+      rail.scrollBy({
+        left: direction * (card.offsetWidth + gap),
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      });
+    };
+    previous.addEventListener('click', () => scrollRail(-1));
+    next.addEventListener('click', () => scrollRail(1));
+    rail.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  }
+</script>

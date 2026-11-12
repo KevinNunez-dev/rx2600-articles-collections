@@ -1,7 +1,7 @@
 ---
 title: "Robotic Massage for Sports Performance"
-description: "Explore the RX2600 Therapeutic Robot as a potential clinician-guided muscular therapy offering for sports performance facilities."
-excerpt: "Explore robotic muscular therapy for active communities, with a practical look at costs and potential revenue."
+description: "Bring clinician-guided muscular therapy to sports performance facilities with the RX2600 Therapeutic Robot."
+excerpt: "Discover robotic muscular therapy for active communities, with a practical look at costs and revenue planning."
 category: "For Sports Performance"
 categorySlug: "sports-performance"
 tags: [robotic massage, sports performance, sports recovery, athletic facilities, robotic therapy, RX2600]
@@ -17,16 +17,16 @@ imageAlt: "A clinician using the RX2600 Therapeutic Robot with a patient"
 keyTakeaways: []
 landing:
   eyebrow: "FOR SPORTS PERFORMANCE FACILITIES"
-  heroLead: "Give your active community a new way to explore clinician-guided muscular therapy—and give your facility a new opportunity to grow."
+  heroLead: "Give your active community clinician-guided robotic muscular therapy—and give your facility a distinctive new service."
   audienceTitle: "Built for people in motion."
   audienceIntro: "From performance facilities to practices serving active clients, the RX2600 brings a technology-forward approach to muscular therapy."
   benefits:
     - title: "Support your care offering"
-      description: "Explore muscular therapy as a possible part of an individualized plan for active people."
+      description: "Bring muscular therapy to individualized care plans for active people."
     - title: "Stand out with technology"
       description: "Introduce a distinctive experience that pairs robotics with qualified professional guidance."
     - title: "Build a business case"
-      description: "Model demand, capacity, pricing, and costs before introducing a potential new service."
+      description: "Build your new service around demand, capacity, pricing, and costs."
   fitTitle: "Designed for your team and the people you serve."
   fitText: "The RX2600 is a clinician-used tool for muscular therapy. Suitability depends on the individual, the qualified professional, and the facility's requirements."
   fitPoints:
@@ -45,8 +45,8 @@ faq:
 related: [robotic-massage-for-physical-therapists, robotic-massage-for-chiropractors]
 seo:
   title: "Robotic Massage for Sports Performance"
-  description: "Explore RX2600 robotic muscular therapy, operating costs, and potential revenue for sports performance facilities."
+  description: "Discover RX2600 robotic muscular therapy, operating costs, and revenue planning for sports performance facilities."
   noindex: false
 ---
 
-Explore clinician-guided muscular therapy and a potential new service opportunity for your sports performance facility.
+Bring clinician-guided muscular therapy and a distinctive new service to your sports performance facility.

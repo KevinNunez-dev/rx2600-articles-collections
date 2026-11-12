@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import '../styles/practice-landing.css';
+import Icon from './Icon.astro';
 
 interface Props {
   article: CollectionEntry<'articles'>;
@@ -14,13 +15,13 @@ if (!landing) throw new Error(`Missing landing page content for ${article.id}`);
 <article class="practice-landing">
   <section class="practice-hero">
     <div class="practice-hero-copy">
-      <a class="practice-back" href="/therapy/articles/">← Back to the library</a>
+      <a class="practice-back" href="/therapy/articles/"><Icon name="arrow-left" /> Back to the library</a>
       <p class="practice-eyebrow"><span></span>{landing.eyebrow}</p>
       <h1>{article.data.title}</h1>
       <p class="practice-hero-lead">{landing.heroLead}</p>
       <div class="button-group">
-        <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
-        <a class="button button-outline" href="#opportunity">Explore the opportunity <span aria-hidden="true">↓</span></a>
+        <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <Icon /></a>
+        <a class="button button-outline" href="#opportunity">Explore the opportunity <Icon name="arrow-down" /></a>
       </div>
       <p class="practice-hero-note">RX2600 Therapeutic Robot · Clinician-guided muscular therapy</p>
     </div>
@@ -70,8 +71,8 @@ if (!landing) throw new Error(`Missing landing page content for ${article.id}`);
       <p class="marketing-kicker">BUILT AROUND YOUR EXPERTISE</p>
       <h2>{landing.fitTitle}</h2>
       <p>{landing.fitText}</p>
-      <ul>{landing.fitPoints.map((point) => <li><span aria-hidden="true">✓</span>{point}</li>)}</ul>
-      <a class="practice-text-link" href="https://rx2600.com/#contact">See if RX2600 is right for you ↗</a>
+      <ul>{landing.fitPoints.map((point) => <li><Icon name="check" />{point}</li>)}</ul>
+      <a class="practice-text-link" href="https://rx2600.com/#contact">Bring RX2600 to your practice <Icon /></a>
     </div>
   </section>
 
@@ -99,11 +100,11 @@ if (!landing) throw new Error(`Missing landing page content for ${article.id}`);
         <p class="economics-label">COSTS &amp; IMPLEMENTATION</p>
         <h3>Know your operating picture.</h3>
         <ul>
-          <li><span aria-hidden="true">↗</span><div><strong>No robot purchase</strong><p>Under the described program; eligibility and terms apply.</p></div></li>
-          <li><span aria-hidden="true">↗</span><div><strong>Flat-rate operational fee</strong><p>Request the current fee and details for your setting.</p></div></li>
-          <li><span aria-hidden="true">↗</span><div><strong>Plan for your own costs</strong><p>Account for staff, space, marketing, and other expenses.</p></div></li>
+          <li><Icon /><div><strong>No robot purchase</strong><p>Under the described program; eligibility and terms apply.</p></div></li>
+          <li><Icon /><div><strong>Flat-rate operational fee</strong><p>Request the current fee and details for your setting.</p></div></li>
+          <li><Icon /><div><strong>Plan for your own costs</strong><p>Account for staff, space, marketing, and other expenses.</p></div></li>
         </ul>
-        <a class="practice-text-link" href="https://rx2600.com/#contact">Request program details ↗</a>
+        <a class="practice-text-link" href="https://rx2600.com/#contact">Request program details <Icon /></a>
       </div>
     </div>
   </section>
@@ -124,7 +125,7 @@ if (!landing) throw new Error(`Missing landing page content for ${article.id}`);
     <p class="marketing-kicker">LET'S TALK ABOUT YOUR PRACTICE</p>
     <h2>Ready to make your next move?</h2>
     <p>Explore the technology, the program, and the possibilities for your team.</p>
-    <a class="button button-accent" href="https://rx2600.com/#contact">Connect with RX2600 <span aria-hidden="true">↗</span></a>
+    <a class="button button-accent" href="https://rx2600.com/#contact">Connect with RX2600 <Icon /></a>
   </section>
 </article>
 

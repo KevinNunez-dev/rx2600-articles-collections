@@ -1,13 +1,20 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
 
 interface Props {
   articles: CollectionEntry<'articles'>[];
+  variant?: 'default' | 'featured' | 'rail';
 }
-const { articles } = Astro.props;
+const { articles, variant = 'default' } = Astro.props;
 ---
 
-<div class="article-grid">
+<div
+  class:list={['article-grid', { 'journal-featured-grid': variant === 'featured', 'journal-rail': variant === 'rail' }]}
+  id={variant === 'rail' ? 'journal-rail' : undefined}
+  tabindex={variant === 'rail' ? '0' : undefined}
+  aria-label={variant === 'rail' ? 'Browse articles' : undefined}
+>
   {articles.map((article, index) => (
     <a
       class="article-card"
@@ -21,7 +28,7 @@ const { articles } = Astro.props;
       <div class="card-meta"><span>{article.data.category}</span><span>{article.data.readingTime} MIN READ</span></div>
       <h3>{article.data.title}</h3>
       <p>{article.data.excerpt}</p>
-      <span class="card-link">Explore article <span aria-hidden="true">↗</span></span>
+      <span class="card-link">Explore article <Icon /></span>
     </a>
   ))}
 </div>
