@@ -1,0 +1,58 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/anatomy.css';
+---
+
+<SiteLayout
+  title="Interactive Lower Back and Pelvis Anatomy | RX2600"
+  description="Explore the lumbar spine, pelvis, and selected muscles in an interactive educational anatomy model."
+>
+  <div class="anatomy-page">
+    <header class="anatomy-header">
+      <p class="anatomy-eyebrow">RX2600 ANATOMY EXPLORER</p>
+      <h1>Get to know the body<br />behind the movement.</h1>
+      <p>Explore the lower back and pelvis in 3D, from the lumbar spine to the muscles that help move and stabilize the hip.</p>
+    </header>
+
+    <section class="explorer" aria-labelledby="explorer-title">
+      <div class="explorer-copy">
+        <p class="anatomy-eyebrow">01 / LOWER BACK &amp; PELVIS</p>
+        <h2 id="explorer-title">A closer look.</h2>
+        <p>Choose a view to explore selected muscles alongside the bones. Drag to rotate and scroll or pinch to zoom.</p>
+        <div class="explorer-views" role="group" aria-label="Anatomy view">
+          <button type="button" data-anatomy-view="all" aria-pressed="true" disabled>All structures</button>
+          <button type="button" data-anatomy-view="bones" aria-pressed="false" disabled>Spine &amp; pelvis</button>
+          <button type="button" data-anatomy-view="hip-flexors" aria-pressed="false" disabled>Psoas &amp; iliacus</button>
+          <button type="button" data-anatomy-view="gluteals" aria-pressed="false" disabled>Deep &amp; lateral hip</button>
+          <button type="button" data-anatomy-view="lower-back" aria-pressed="false" disabled>Lower back muscles</button>
+        </div>
+        <p class="explorer-help">Deep &amp; lateral hip shows the piriformis and gluteus medius. Lower back muscles shows the quadratus lumborum.</p>
+        <p class="explorer-help">Colors distinguish muscle groups from the bones; they are illustrative, not anatomical colors.</p>
+      </div>
+      <div class="explorer-visual">
+        <canvas data-anatomy-canvas tabindex="0" aria-label="Interactive three-dimensional model of the lumbar spine, pelvis and selected muscles. Drag to rotate or use the arrow keys when focused."></canvas>
+        <p class="explorer-status" data-anatomy-status role="status">Loading anatomy model...</p>
+        <noscript><p class="explorer-no-script">JavaScript is required for the interactive viewer. You can download the model using the link below.</p></noscript>
+      </div>
+    </section>
+
+    <section class="anatomy-details">
+      <div>
+        <p class="anatomy-eyebrow">A NOTE ON CARE</p>
+        <h2>Understanding anatomy is a starting point.</h2>
+        <p>This model is for education, not diagnosis. Anatomy alone does not establish the cause of pain or prove that RX2600 treats a condition. A qualified clinician can assess symptoms and discuss appropriate care.</p>
+        <p>For symptoms or concerns, explore our guides to <a href="/therapy/back-pain-treatment-with-the-rx2600-therapeutic-robot/">back pain</a> and <a href="/therapy/sciatica-treatment-with-the-rx2600-therapeutic-robot/">sciatica</a>.</p>
+      </div>
+      <div class="anatomy-credits">
+        <h2>Model credits</h2>
+        <p>Adapted from <a href="https://github.com/Z-Anatomy/Models-of-human-anatomy">Z-Anatomy – The libre 3D atlas of anatomy</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Selected structures were extracted and converted to GLB for this viewer.</p>
+        <p>Based on BodyParts3D, Copyright © 2008 Life Science Integrated Database Center, licensed by <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/">CC Attribution-ShareAlike 2.1 Japan</a>. <a href="https://lifesciencedb.jp/bp3d/info_en/license/index.html">Source attribution and license information</a>.</p>
+        <p><a href="/therapy/media/anatomy/lumbar-pelvis.glb" download>Download the adapted model</a></p>
+      </div>
+    </section>
+  </div>
+</SiteLayout>
+
+<script>
+  import '../../scripts/anatomy-explorer';
+</script>

@@ -11,6 +11,7 @@ export const GET: APIRoute = async ({ site }) => {
     new URL('/therapy/', site).toString(),
     new URL('/therapy/articles/', site).toString(),
     new URL('/therapy/business/', site).toString(),
+    new URL('/therapy/anatomy/', site).toString(),
     ...articles.map((article) => new URL(`/therapy/${article.id}/`, site).toString()),
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls
