@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+import JsonLd from '../components/JsonLd.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  image?: string;
+  imageAlt?: string;
+}
+
+const { title, description, canonical, noindex = false, image, imageAlt } = Astro.props;
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'RX2600 Therapy Library',
+  url: new URL('/therapy/', Astro.site).toString(),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111312" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/therapy/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RX2600" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {image && <meta property="og:image" content={new URL(image, Astro.site).toString()} />}
+    {image && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    <JsonLd data={websiteSchema} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/therapy/" aria-label="RX2600 Therapy home">
+        <img src="/therapy/media/rx2600-logo-white.png" alt="" width="1024" height="401" />
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/therapy/">Explore</a>
+        <a href="/therapy/#approach">Our approach</a>
+        <a class="nav-cta" href="/therapy/#library">Read the library <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="/therapy/">
+        <img src="/therapy/media/rx2600-logo-white.png" alt="RX2600 Therapy home" width="1024" height="401" />
+      </a>
+      <p>Thoughtful perspectives on movement, recovery, and robotic therapy.</p>
+      <span class="footer-note">Education, not a substitute for professional advice.</span>
+    </footer>
+  </body>
+</html>

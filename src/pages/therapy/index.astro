@@ -1,0 +1,101 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+
+const articles = (await getCollection('articles'))
+  .filter(({ data }) => !data.draft && !data.seo.noindex)
+  .sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf());
+---
+
+<SiteLayout
+  title="RX2600 | A new perspective on robotic therapy"
+  description="Explore thoughtful perspectives on movement, recovery, and the evolving role of robotics in therapy."
+  image="/therapy/media/rx2600-showcase.jpg"
+  imageAlt="A clinician using the RX2600 Therapeutic Robot"
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span> A different kind of precision</p>
+      <h1>Move toward<br /><span>what matters.</span></h1>
+      <p class="hero-intro">
+        Explore how clinician-guided robotic therapy fits into a thoughtful approach to movement and muscular care.
+      </p>
+      <a class="text-link" href="#library">Explore the library <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="hero-art">
+      <img src="/therapy/media/rx2600-robot.png" width="1080" height="1080" alt="Close-up of the RX2600 Therapeutic Robot treatment head" />
+      <span class="art-caption">THE RX2600 THERAPEUTIC ROBOT</span>
+    </div>
+  </section>
+
+  <section class="intro-section" id="approach">
+    <div class="section-kicker"><span>01</span><span>THE APPROACH</span></div>
+    <div class="intro-copy">
+      <h2>Technology, with a more <em>human</em> point of view.</h2>
+      <p>
+        The RX2600 Therapeutic Robot is a tool clinicians use in muscular therapy. Here, we explore movement, soft tissue care, and the questions people have about robotic therapy.
+      </p>
+    </div>
+    <div class="intro-note">
+      <span class="note-mark" aria-hidden="true">↗</span>
+      <p>Clear information.<br />Thoughtful exploration.</p>
+    </div>
+  </section>
+
+  <section class="product-section" aria-labelledby="product-heading">
+    <img src="/therapy/media/rx2600-showcase.jpg" width="2560" height="1359" loading="lazy" alt="A clinician using the RX2600 Therapeutic Robot with a patient" />
+    <div class="product-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span> TECHNOLOGY &amp; CARE</p>
+      <h2 id="product-heading">Precision has a<br /><em>human side.</em></h2>
+      <p>Designed for use in clinical settings, the RX2600 supports practitioners as they work with the people in their care.</p>
+      <a class="text-link" href="https://rx2600.com/">Meet the RX2600 <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="library-section" id="library">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE RX2600 JOURNAL</p>
+        <h2>Ideas in <em>motion.</em></h2>
+      </div>
+      <p class="library-count">{articles.length.toString().padStart(2, '0')} ARTICLES</p>
+    </div>
+    {articles.length > 0 ? (
+      <div class="article-grid">
+        {articles.map((article, index) => (
+          <a class="article-card" href={`/therapy/${article.id}/`}>
+            <div class:list={['card-visual', `visual-${(index % 3) + 1}`]} aria-hidden="true">
+              {article.data.image ? (
+                <img src={article.data.image} alt="" loading="lazy" />
+              ) : (
+                <>
+                  <span class="card-visual-index">{String(index + 1).padStart(2, '0')}</span>
+                  <span class="card-visual-orbit"></span>
+                  <span class="card-visual-caption">{article.data.category}</span>
+                </>
+              )}
+            </div>
+            <div class="card-meta">
+              <span>{article.data.category}</span>
+              <span>{article.data.readingTime} MIN READ</span>
+            </div>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.excerpt}</p>
+            <span class="card-link">Explore article <span aria-hidden="true">↗</span></span>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <span class="empty-state-index">THE FIRST EDITION</span>
+        <h3>Something thoughtful is<br />taking shape.</h3>
+        <p>Our first stories on movement and robotic therapy are in the works.</p>
+      </div>
+    )}
+  </section>
+
+  <section class="closing-note">
+    <span class="closing-mark" aria-hidden="true">R.</span>
+    <p>Movement is personal.<br /><em>So is the conversation around it.</em></p>
+  </section>
+</SiteLayout>

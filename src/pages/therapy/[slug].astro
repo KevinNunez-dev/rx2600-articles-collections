@@ -1,0 +1,92 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) =>
+    import.meta.env.DEV || (!data.draft && !data.seo.noindex),
+  );
+
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const canonical = article.data.seo.canonical || new URL(`/therapy/${article.id}/`, Astro.site).toString();
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.data.title,
+  description: article.data.seo.description,
+  datePublished: article.data.publishedAt.toISOString(),
+  dateModified: article.data.updatedAt.toISOString(),
+  author: { '@type': 'Organization', name: article.data.author },
+  mainEntityOfPage: canonical,
+  ...(article.data.image ? { image: new URL(article.data.image, Astro.site).toString() } : {}),
+};
+---
+
+<SiteLayout
+  title={`${article.data.seo.title} | RX2600`}
+  description={article.data.seo.description}
+  canonical={canonical}
+  noindex={article.data.draft || article.data.seo.noindex}
+  image={article.data.image || undefined}
+  imageAlt={article.data.imageAlt || undefined}
+>
+  <JsonLd data={articleSchema} />
+  <article class="article-page">
+    <div class="article-topline">
+      <a href="/therapy/">← All stories</a>
+      <span>{article.data.category}</span>
+    </div>
+    <header class="article-header">
+      <p class="eyebrow"><span class="eyebrow-line"></span> {article.data.contentType}</p>
+      <h1>{article.data.title}</h1>
+      <p class="article-deck">{article.data.description}</p>
+      <div class="article-byline">
+        <span>By {article.data.author}</span>
+        <span>{article.data.readingTime} min read</span>
+        <time datetime={article.data.updatedAt.toISOString()}>
+          Updated {article.data.updatedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </div>
+    </header>
+    {article.data.image && (
+      <img class="article-cover" src={article.data.image} alt={article.data.imageAlt} />
+    )}
+    <div class="article-layout">
+      <aside class="takeaways">
+        <p class="takeaways-label">IN THIS STORY</p>
+        <ul>
+          {article.data.keyTakeaways.map((item) => <li>{item}</li>)}
+        </ul>
+      </aside>
+      <div class="prose">
+        <Content />
+        {article.data.faq.length > 0 && (
+          <section class="article-faq">
+            <h2>Questions, considered.</h2>
+            {article.data.faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </section>
+        )}
+        {article.data.reviewedBy && (
+          <p class="review-note">
+            Reviewed by {article.data.reviewedBy.name}, {article.data.reviewedBy.credentials} on{' '}
+            {article.data.reviewedBy.reviewedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}.
+          </p>
+        )}
+        <p class="health-note">This article is for general educational purposes and is not a substitute for professional medical advice.</p>
+      </div>
+    </div>
+  </article>
+</SiteLayout>
