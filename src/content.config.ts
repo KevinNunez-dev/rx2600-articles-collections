@@ -26,6 +26,19 @@ const articles = defineCollection({
       answer: z.string(),
     })).default([]),
     related: z.array(z.string()).optional(),
+    landing: z.object({
+      eyebrow: z.string(),
+      heroLead: z.string(),
+      audienceTitle: z.string(),
+      audienceIntro: z.string(),
+      benefits: z.array(z.object({
+        title: z.string(),
+        description: z.string(),
+      })).min(1),
+      fitTitle: z.string(),
+      fitText: z.string(),
+      fitPoints: z.array(z.string()).min(1),
+    }).optional(),
     reviewedBy: z.object({
       name: z.string(),
       credentials: z.string(),

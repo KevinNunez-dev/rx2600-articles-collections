@@ -1,0 +1,104 @@
+.practice-landing { background: #f7f9f9; color: #111a20; }
+.practice-hero { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; min-height: 680px; overflow: hidden; background: radial-gradient(ellipse at 75% 48%, #0c3038, transparent 53%), #071116; color: #fff; }
+.practice-hero-copy { position: relative; z-index: 2; align-self: center; padding: 48px 0 90px max(7vw, calc((100vw - 1320px) / 2)); }
+.practice-back { display: inline-block; margin-bottom: 70px; color: #b6c8cb; font-size: .8rem; }
+.practice-back:hover { color: #48d5e0; }
+.practice-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 25px; color: #5bd4df; font-size: .68rem; font-weight: 700; letter-spacing: .16em; }
+.practice-eyebrow span { width: 30px; height: 1px; background: #0fb4c6; }
+.practice-hero h1 { max-width: 720px; margin: 0; font-size: clamp(3.2rem, 5.5vw, 6rem); font-weight: 700; letter-spacing: -.055em; line-height: 1.03; }
+.practice-hero-lead { max-width: 500px; margin: 25px 0 0; color: #c7d4d7; font-size: 1.1rem; line-height: 1.7; }
+.practice-hero-note { margin: 40px 0 0; color: #8ca4a9; font-size: .69rem; letter-spacing: .04em; }
+.practice-hero-art { position: relative; min-height: 580px; display: grid; place-items: center; }
+.practice-art-glow { position: absolute; width: 65%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(15, 180, 198, .2), transparent 68%); }
+.practice-orbit-fallback { position: absolute; width: min(72%, 440px); aspect-ratio: 1; border: 1px solid rgba(75, 218, 228, .24); border-radius: 50%; }
+.practice-orbit-fallback::after { position: absolute; inset: 12%; content: ''; border: 1px solid rgba(75, 218, 228, .12); border-radius: 50%; }
+.practice-orbit { position: absolute; inset: 0; width: 100%; height: 100%; }
+.practice-hero-art img { position: relative; width: min(85%, 560px); height: auto; filter: drop-shadow(0 25px 45px rgba(0,0,0,.4)); }
+.practice-art-label { position: absolute; right: 12%; bottom: 45px; color: #95adb1; font-size: .58rem; letter-spacing: .15em; }
+.practice-benefits { padding: 110px max(7vw, calc((100vw - 1320px) / 2)); }
+.practice-section-heading { max-width: 740px; margin: 0 auto 50px; text-align: center; }
+.practice-section-heading .marketing-kicker, .practice-fit .marketing-kicker, .practice-faq .marketing-kicker { color: #087c89; }
+.practice-section-heading h2, .practice-fit h2, .practice-economics h2, .practice-faq h2 { margin: 0 0 18px; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1.08; letter-spacing: -.05em; }
+.practice-section-heading > p:not(.marketing-kicker), .practice-fit-copy > p:not(.marketing-kicker) { color: #526168; font-size: 1rem; line-height: 1.75; }
+.practice-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.practice-benefit-card { min-height: 245px; padding: 30px; border: 1px solid #dce5e7; border-radius: 12px; background: #fff; box-shadow: 0 15px 40px rgba(10,30,35,.04); transition: transform .25s ease, box-shadow .25s ease; }
+.practice-benefit-card:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(10,30,35,.1); }
+.practice-card-top { display: flex; justify-content: space-between; align-items: center; }
+.practice-card-icon { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 12px; background: #e4f6f7; color: #087f8b; }
+.practice-card-icon svg { width: 26px; height: 26px; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.practice-card-number { color: #9cabad; font-size: .7rem; letter-spacing: .12em; }
+.practice-benefit-card h3 { margin: 28px 0 10px; font-size: 1.3rem; letter-spacing: -.03em; }
+.practice-benefit-card p { margin: 0; color: #536168; font-size: .92rem; line-height: 1.7; }
+.practice-fit { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; background: #eaf0f1; }
+.practice-fit-image { position: relative; min-height: 580px; overflow: hidden; background: #192b31; }
+.practice-fit-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.practice-fit-image span { position: absolute; bottom: 25px; left: 30px; padding: 10px 12px; border-radius: 5px; background: rgba(5, 16, 20, .8); color: #fff; font-size: .6rem; letter-spacing: .14em; }
+.practice-fit-copy { align-self: center; max-width: 720px; padding: 80px 12%; }
+.practice-fit-copy ul { display: grid; gap: 14px; margin: 28px 0; padding: 0; list-style: none; }
+.practice-fit-copy li { display: flex; gap: 12px; align-items: start; font-size: .9rem; line-height: 1.5; }
+.practice-fit-copy li span { color: #087f8b; font-weight: 700; }
+.practice-text-link { color: #087c89; font-size: .85rem; font-weight: 700; }
+.practice-text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.practice-economics { padding: 110px max(7vw, calc((100vw - 1320px) / 2)); background: #0a171c; color: #fff; }
+.practice-economics-heading { max-width: 720px; }
+.practice-economics h2 span { color: #62d7e1; }
+.practice-economics-heading > p:not(.marketing-kicker) { color: #bdcdd0; line-height: 1.7; }
+.practice-economics-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; margin-top: 45px; }
+.economics-card { padding: 35px; border: 1px solid #29444a; border-radius: 12px; background: #11242a; }
+.economics-model { background: linear-gradient(140deg, #12363d, #11242a 70%); }
+.economics-label { margin: 0; color: #68d6e0; font-size: .66rem; font-weight: 700; letter-spacing: .14em; }
+.economics-amount { margin: 25px 0 3px; font-size: clamp(3.6rem, 6vw, 5.8rem); font-weight: 700; letter-spacing: -.06em; line-height: 1; }
+.economics-model > p:not(.economics-label):not(.economics-amount) { color: #c6d6d8; }
+.economics-equation { display: flex; align-items: center; gap: 22px; margin-top: 32px; padding-top: 25px; border-top: 1px solid #36535a; color: #61ccd5; }
+.economics-equation div { display: flex; flex-direction: column; gap: 5px; }
+.economics-equation strong { color: #fff; font-size: 1.4rem; }
+.economics-equation div span { color: #bccdd0; font-size: .7rem; }
+.economics-disclaimer { margin: 27px 0 0; font-size: .74rem; line-height: 1.65; }
+.economics-costs h3 { margin: 25px 0; font-size: 1.8rem; letter-spacing: -.04em; }
+.economics-costs ul { display: grid; gap: 19px; margin: 0 0 25px; padding: 0; list-style: none; }
+.economics-costs li { display: flex; gap: 14px; }
+.economics-costs li > span { color: #61d6df; }
+.economics-costs li strong { font-size: .92rem; }
+.economics-costs li p { margin: 5px 0 0; color: #bccdd0; font-size: .82rem; line-height: 1.55; }
+.economics-costs .practice-text-link { color: #6de0e8; }
+.practice-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; padding: 110px max(7vw, calc((100vw - 1320px) / 2)); }
+.practice-faq-intro > p:not(.marketing-kicker) { color: #536168; line-height: 1.7; }
+.practice-faq-list details { border-top: 1px solid #cfdddf; }
+.practice-faq-list details:last-child { border-bottom: 1px solid #cfdddf; }
+.practice-faq-list summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 23px 0; cursor: pointer; font-size: 1rem; font-weight: 700; list-style: none; }
+.practice-faq-list summary::-webkit-details-marker { display: none; }
+.practice-faq-list summary span { display: grid; width: 30px; height: 30px; flex: 0 0 30px; place-items: center; border-radius: 50%; background: #e2f3f4; color: #087c89; }
+.practice-faq-list summary span::before { content: '+'; font-size: 1.2rem; font-weight: 400; }
+.practice-faq-list details[open] summary span::before { content: '−'; }
+.practice-faq-list details p { margin: 0 35px 22px 0; color: #536168; font-size: .91rem; line-height: 1.7; }
+.practice-conversion { background: radial-gradient(ellipse at 50% 100%, #124b54, transparent 65%), #071217; }
+@media (max-width: 900px) {
+  .practice-hero { grid-template-columns: 1fr 1fr; min-height: 580px; }
+  .practice-hero-copy { padding-left: 7%; }
+  .practice-hero h1 { font-size: clamp(3rem, 6vw, 4.5rem); }
+  .practice-hero-art { min-height: 500px; }
+  .practice-card-grid { gap: 12px; }
+  .practice-benefit-card { padding: 23px; }
+  .practice-fit-copy { padding: 60px 8%; }
+  .practice-economics-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .practice-hero { grid-template-columns: 1fr; }
+  .practice-hero-copy { padding: 35px 7% 0; }
+  .practice-back { margin-bottom: 45px; }
+  .practice-hero h1 { font-size: clamp(3rem, 11vw, 4.4rem); }
+  .practice-hero-lead { font-size: 1rem; }
+  .practice-hero-art { min-height: 320px; }
+  .practice-hero-art img { width: min(70%, 350px); }
+  .practice-art-label { bottom: 20px; right: 7%; }
+  .practice-benefits, .practice-economics, .practice-faq { padding: 75px 7%; }
+  .practice-section-heading { text-align: left; }
+  .practice-card-grid, .practice-fit, .practice-faq { grid-template-columns: 1fr; }
+  .practice-benefit-card { min-height: 0; }
+  .practice-fit-image { min-height: 330px; }
+  .practice-fit-copy { padding: 65px 7%; }
+  .economics-card { padding: 25px; }
+  .economics-equation { gap: 12px; }
+  .economics-equation strong { font-size: 1.15rem; }
+  .practice-faq { gap: 30px; }
+}

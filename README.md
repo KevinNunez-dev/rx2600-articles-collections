@@ -36,6 +36,8 @@ The searchable article archive is `/therapy/articles/`. Header searches use the 
 
 Article pages render key takeaways as cards, Markdown level-two headings as an on-page contents menu, FAQ entries as expandable questions, and published entries listed in `related` as linked cards. Use Markdown lists to make practical steps scannable; draft and noindex articles do not appear in related cards.
 
+Audience-specific marketing pages can use the optional `landing` frontmatter fields to render a shorter practice-landing template. Their revenue scenario is illustrative gross revenue, not profit or a forecast; verify program terms and all product or clinical claims before publishing. The decorative Three.js animation is not a representation of the robot and falls back to static artwork when reduced motion is requested or WebGL is unavailable.
+
 ## Build and preview
 
 ```powershell
@@ -67,4 +69,4 @@ The starter uses selected assets from the public RX2600 WordPress media library:
 
 Confirm the right to reuse each image and any depicted individuals' permissions before publishing. The media files are local to the build; the REST API is not needed at runtime. Existing WordPress pages are references only and are not imported as articles.
 
-The homepage links to the existing RX2600 inquiry form and the existing physical therapy, chiropractic, and sports pages while the new topic pages remain unpublished. Review the current Growth Partner Program terms and all marketing claims before deployment.
+The homepage links to the existing RX2600 inquiry form and to the physical therapy, chiropractic, and sports performance landing pages in this library. Review the current Growth Partner Program terms and all marketing claims before deployment.

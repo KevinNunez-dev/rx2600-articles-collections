@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import ArticleList from '../../components/ArticleList.astro';
+import PracticeLanding from '../../components/PracticeLanding.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) =>
@@ -45,6 +46,10 @@ const articleSchema = {
   imageAlt={article.data.imageAlt || undefined}
 >
   <JsonLd data={articleSchema} />
+  {article.data.landing ? (
+    <PracticeLanding article={article} />
+  ) : (
+  <>
   <article class="article-page">
     <header class:list={['article-hero', { 'article-hero-no-image': !article.data.image }]}>
       <div class="article-hero-copy">
@@ -137,4 +142,6 @@ const articleSchema = {
     <p>Connect with our team to discuss your goals and explore the right fit.</p>
     <a class="button button-accent" href="https://rx2600.com/#contact">Talk to our team <span aria-hidden="true">↗</span></a>
   </section>
+  </>
+  )}
 </SiteLayout>
