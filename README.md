@@ -40,6 +40,8 @@ Article pages render key takeaways as cards, Markdown level-two headings as an o
 
 Audience-specific marketing pages can use the optional `landing` frontmatter fields to render a shorter practice-landing template. Their revenue scenario is illustrative gross revenue, not profit or a forecast; verify program terms and all product or clinical claims before publishing. The decorative Three.js animation is not a representation of the robot and falls back to static artwork when reduced motion is requested or WebGL is unavailable.
 
+The site-wide guided assistant in `src/components/GuidedAssistant.astro` provides prewritten answers and links; it is not live or AI chat and collects no visitor information. Update its answers when approved product or program terms change, and review clinical and financial wording before publication. Its topic disclosures work without JavaScript.
+
 ## Build and preview
 
 ```powershell

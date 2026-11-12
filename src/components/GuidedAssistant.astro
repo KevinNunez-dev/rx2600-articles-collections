@@ -1,0 +1,79 @@
+---
+import Icon from './Icon.astro';
+import '../styles/guided-assistant.css';
+---
+
+<details class="guided-assistant">
+  <summary class="assistant-launcher">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M5 18.5 3.5 21v-4A8.5 8.5 0 1 1 12 20c-1.6 0-3.1-.4-4.4-1.2L5 18.5Z"></path>
+      <path d="M8 11.5h8M8 15h5"></path>
+    </svg>
+    <span>Ask about RX2600</span>
+  </summary>
+  <section class="assistant-panel" aria-labelledby="assistant-title">
+    <div class="assistant-header">
+      <div>
+        <p>RX2600 GUIDE</p>
+        <h2 id="assistant-title">How can we help?</h2>
+        <span>Choose a topic to get started.</span>
+      </div>
+      <button class="assistant-close" type="button" aria-label="Close RX2600 guide" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+    </div>
+    <div class="assistant-content">
+      <p class="assistant-intro">Discover the technology, the program, and the opportunities for your practice.</p>
+      <div class="assistant-topics">
+        <details>
+          <summary>How does RX2600 work?<span aria-hidden="true"></span></summary>
+          <div><p>The RX2600 is a clinician-used therapeutic robot that assists with muscular therapy and soft tissue mobilization. Your clinician's assessment and judgment guide its use.</p><a href="/therapy/#approach">Discover the technology <Icon /></a></div>
+        </details>
+        <details>
+          <summary>Who is it for?<span aria-hidden="true"></span></summary>
+          <div><p>RX2600 supports clinician-guided muscular therapy in physical therapy, chiropractic, sports performance, and wellness settings. Training and applicable professional requirements matter in each setting.</p><a href="/therapy/#who-its-for">Explore practice settings <Icon /></a></div>
+        </details>
+        <details>
+          <summary>What does the program cost?<span aria-hidden="true"></span></summary>
+          <div><p>RX2600 describes the Growth Partner Program as a no-purchase arrangement with a flat-rate operational fee. Eligibility and terms apply; ask our team for current written details and fees.</p><a href="https://rx2600.com/#contact">Request program details <Icon /></a></div>
+        </details>
+        <details>
+          <summary>How does revenue planning work?<span aria-hidden="true"></span></summary>
+          <div><p>Plan around your pricing, completed sessions, demand, and expenses. Revenue is not profit, and results vary. Our article offers a framework for building your own model.</p><a href="/therapy/increase-revenue-with-robotic-therapy/">Read the revenue guide <Icon /></a></div>
+        </details>
+        <details>
+          <summary>What about therapy and conditions?<span aria-hidden="true"></span></summary>
+          <div><p>RX2600 assists clinicians with muscular therapy. A qualified clinician determines appropriate care for each person. This guide does not diagnose conditions or replace medical advice.</p><a href="https://rx2600.com/#contact">Ask our team about therapy <Icon /></a></div>
+        </details>
+        <details>
+          <summary>How can I contact the team?<span aria-hidden="true"></span></summary>
+          <div><p>Connect with the RX2600 team to discuss the technology, program details, and your practice.</p><a href="https://rx2600.com/#contact">Contact RX2600 <Icon /></a></div>
+        </details>
+      </div>
+      <p class="assistant-note">Guided answers, not live chat. No information is collected in this widget.</p>
+    </div>
+  </section>
+</details>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.guided-assistant').forEach((assistant) => {
+    const launcher = assistant.querySelector<HTMLElement>('.assistant-launcher');
+    const close = assistant.querySelector<HTMLButtonElement>('.assistant-close');
+
+    const closeAssistant = () => {
+      assistant.open = false;
+      launcher?.focus();
+    };
+
+    if (close) {
+      close.hidden = false;
+      close.addEventListener('click', closeAssistant);
+    }
+    assistant.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && assistant.open) {
+        event.preventDefault();
+        closeAssistant();
+      }
+    });
+  });
+</script>
