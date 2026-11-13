@@ -29,8 +29,8 @@ faq:
     answer: "Explain how information will be used and review applicable privacy, consent, and communication requirements with qualified advisors."
 related: [physical-therapy-niche-rx2600, cash-pay-add-ons-technology-rx2600, physical-therapy-business-metrics-rx2600]
 seo:
-  title: "Physical Therapy Marketing Funnels with the RX2600"
-  description: "Build digital and community outreach for a physical therapy practice offering clinician-guided RX2600 muscular therapy."
+  title: "Physical Therapy Marketing Funnels and Outreach"
+  description: "Build a physical therapy marketing funnel with local workshops, digital education, follow-up, and responsible RX2600 service messaging."
   noindex: false
 ---
 

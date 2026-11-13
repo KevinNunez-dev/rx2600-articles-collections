@@ -1,5 +1,5 @@
 ---
-title: "RX2600 and Sports Performance"
+title: "Robotic Therapy for Sports Performance"
 description: "Explore the role clinician-guided muscular therapy may play in an athlete's wider care plan."
 excerpt: "A thoughtful look at muscular care, movement, and the needs of active people."
 category: "Sports Performance"
@@ -20,8 +20,8 @@ keyTakeaways:
 faq: []
 related: [rx2600-for-physical-therapy-practices, rx2600-for-business]
 seo:
-  title: "RX2600 and Sports Performance"
-  description: "Explore clinician-guided muscular therapy and considerations for active people."
+  title: "Robotic Therapy for Sports Performance"
+  description: "Explore how sports performance practices can consider RX2600 clinician-guided muscular therapy for active clients and athletes."
   noindex: false
 ---
 

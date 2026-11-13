@@ -21,7 +21,7 @@ faq: []
 related: [rx2600-for-business, rehabilitation-robotics-practice-revenue]
 seo:
   title: "Exploring Practice Revenue with Robotic Therapy"
-  description: "Review practical questions about demand, costs, pricing, and implementation before adding robotic therapy."
+  description: "Review pricing, patient demand, operating costs, and implementation questions before adding robotic therapy to a clinical practice."
   noindex: false
 ---
 

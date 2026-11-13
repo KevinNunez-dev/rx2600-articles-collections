@@ -20,8 +20,8 @@ keyTakeaways:
 faq: []
 related: [rx2600-for-physical-therapy-practices, rx2600-for-chiropractors, robotic-therapy-practice-revenue]
 seo:
-  title: "RX2600 for Business: Robotic Therapy for Practices"
-  description: "Explore considerations for introducing the RX2600 Therapeutic Robot to a clinical practice."
+  title: "Introducing Robotic Therapy to Your Practice"
+  description: "Consider clinical fit, clinician training, space, scheduling, and operating requirements before introducing the RX2600 to your practice."
   noindex: false
 ---
 

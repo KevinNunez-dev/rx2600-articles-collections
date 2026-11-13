@@ -29,8 +29,8 @@ faq:
     answer: "No. The RX2600 is a clinician-used tool for muscular therapy. Assessment and clinical judgment remain with the qualified professional."
 related: [physical-therapy-niche-rx2600, hybrid-to-cash-physical-therapy-rx2600, physical-therapy-business-metrics-rx2600]
 seo:
-  title: "Cash-Pay Add-Ons & Tech with the RX2600 Therapeutic Robot"
-  description: "Explore cash-pay physical therapy services, robotic technology, operating costs, and revenue planning with the RX2600."
+  title: "Cash-Pay Physical Therapy Add-Ons and Technology"
+  description: "Evaluate cash-pay physical therapy services, technology costs, patient experience, and the RX2600 Growth Partner Program."
   noindex: false
 ---
 

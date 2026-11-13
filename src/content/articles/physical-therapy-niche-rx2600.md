@@ -29,8 +29,8 @@ faq:
     answer: "No. Review coverage, payer contracts, Medicare requirements, and applicable law before deciding how a particular service is billed."
 related: [cash-pay-add-ons-technology-rx2600, physical-therapy-marketing-funnels-rx2600, physical-therapy-business-metrics-rx2600]
 seo:
-  title: "Physical Therapy Niche with the RX2600 Therapeutic Robot"
-  description: "Define a physical therapy niche and build a distinctive clinician-guided muscular therapy service with RX2600."
+  title: "How to Find a Physical Therapy Niche"
+  description: "Define a physical therapy niche, understand your community, and evaluate how RX2600 muscular therapy may fit your practice's services."
   noindex: false
 ---
 

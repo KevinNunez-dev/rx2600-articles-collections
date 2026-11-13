@@ -29,8 +29,8 @@ faq:
     answer: "No. Set a budget based on your goals, available resources, local market, and measured results rather than an unsupported universal target."
 related: [cash-pay-add-ons-technology-rx2600, physical-therapy-marketing-funnels-rx2600, hybrid-to-cash-physical-therapy-rx2600]
 seo:
-  title: "Physical Therapy Business Metrics with the RX2600"
-  description: "Track cash-pay revenue, costs, demand, marketing, and implementation for an RX2600 physical therapy service."
+  title: "Physical Therapy Business Metrics for Cash-Pay Growth"
+  description: "Track cash-pay revenue, service costs, demand, marketing, and implementation when evaluating an RX2600 physical therapy service."
   noindex: false
 ---
 

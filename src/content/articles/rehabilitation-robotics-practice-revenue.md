@@ -20,8 +20,8 @@ keyTakeaways:
 faq: []
 related: [robotic-therapy-practice-revenue, rx2600-for-physical-therapy-practices]
 seo:
-  title: "Rehabilitation Robotics and Practice Growth"
-  description: "Consider demand, workflow, costs, and clinical fit when evaluating rehabilitation robotics."
+  title: "Rehabilitation Robotics and Practice Revenue"
+  description: "Evaluate patient demand, clinician workflow, operating costs, and clinical fit when considering rehabilitation robotics for your practice."
   noindex: false
 ---
 

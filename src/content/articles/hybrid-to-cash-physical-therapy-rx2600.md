@@ -29,8 +29,8 @@ faq:
     answer: "Describe RX2600 as a clinician-used muscular therapy tool and explain that a qualified professional determines whether care is appropriate for the individual."
 related: [cash-pay-add-ons-technology-rx2600, physical-therapy-niche-rx2600, physical-therapy-business-metrics-rx2600]
 seo:
-  title: "Hybrid to Cash Physical Therapy with the RX2600"
-  description: "Explore patient education, cash-pay pricing, Medicare considerations, and clinician-guided RX2600 therapy in a hybrid practice."
+  title: "Hybrid to Cash-Pay Physical Therapy: A Guide"
+  description: "Explore cash-pay pricing, patient education, Medicare considerations, and RX2600 muscular therapy in an insurance-based or hybrid practice."
   noindex: false
 ---
 

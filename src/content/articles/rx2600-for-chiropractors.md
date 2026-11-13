@@ -1,5 +1,5 @@
 ---
-title: "RX2600 for Chiropractic Practices"
+title: "Robotic Therapy for Chiropractic Practices"
 description: "Explore considerations for chiropractic practices interested in clinician-guided robotic muscular therapy."
 excerpt: "Consider how the RX2600 might fit into a chiropractic practice's existing approach to care."
 category: "For Business"
@@ -20,8 +20,8 @@ keyTakeaways:
 faq: []
 related: [rx2600-for-business, robotic-therapy-practice-revenue]
 seo:
-  title: "RX2600 for Chiropractic Practices"
-  description: "Learn what chiropractic practices can consider when exploring the RX2600 Therapeutic Robot."
+  title: "Robotic Therapy for Chiropractic Practices"
+  description: "Explore clinical fit, workflow, and patient experience considerations for adding RX2600 robotic muscular therapy to a chiropractic practice."
   noindex: false
 ---
 

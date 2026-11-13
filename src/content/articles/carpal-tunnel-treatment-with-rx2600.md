@@ -30,8 +30,8 @@ faq:
 related: [sciatica-treatment-with-the-rx2600-therapeutic-robot, back-pain-treatment-with-the-rx2600-therapeutic-robot]
 anatomyModel: carpal-tunnel
 seo:
-  title: "Carpal Tunnel Treatment with RX2600"
-  description: "Understand carpal tunnel symptoms, care options, and questions about clinician-guided therapy with the RX2600."
+  title: "Carpal Tunnel Symptoms, Care and Robotic Therapy"
+  description: "Explore carpal tunnel symptoms, assessment, established treatment options, and questions about RX2600 muscular therapy and its limitations."
   noindex: false
 ---
 

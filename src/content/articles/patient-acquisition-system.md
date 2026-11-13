@@ -1,5 +1,5 @@
 ---
-title: "Patient Aquisition System"
+title: "Patient Acquisition System"
 description: "Build a practical patient acquisition system for your physical therapy, chiropractic, or wellness practice."
 excerpt: "Turn discovery, follow-up, and patient experience into a connected approach to practice growth."
 category: "Practice Growth"
@@ -29,8 +29,8 @@ faq:
     answer: "Map how people find the practice, ask questions, and schedule a visit. Then address the most important gaps in visibility, communication, and follow-up."
 related: [increase-revenue-with-robotic-therapy, increase-revenue-with-rehabilitation-robotics]
 seo:
-  title: "Patient Aquisition System for Practice Growth"
-  description: "Learn how to build a patient acquisition system for a physical therapy, chiropractic, or wellness practice."
+  title: "Patient Acquisition System for Practice Growth"
+  description: "Build a patient acquisition system for your practice, from local visibility and inquiries to scheduling, follow-up, and measuring results."
   noindex: false
 ---
 

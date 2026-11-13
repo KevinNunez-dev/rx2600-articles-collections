@@ -1,5 +1,5 @@
 ---
-title: "RX2600 for Physical Therapy Practices"
+title: "Robotic Therapy for Physical Therapy Practices"
 description: "Consider where clinician-guided robotic therapy could fit within a physical therapy practice."
 excerpt: "A closer look at incorporating a robotic tool alongside a physical therapist's clinical judgment."
 category: "For Business"
@@ -20,8 +20,8 @@ keyTakeaways:
 faq: []
 related: [rx2600-for-business, rehabilitation-robotics-practice-revenue]
 seo:
-  title: "RX2600 for Physical Therapy Practices"
-  description: "Explore considerations for physical therapy practices interested in the RX2600 Therapeutic Robot."
+  title: "Robotic Therapy for Physical Therapy Practices"
+  description: "Explore how physical therapy practices can evaluate the RX2600 for clinician-guided muscular therapy, workflows, and patient experience."
   noindex: false
 ---
 
